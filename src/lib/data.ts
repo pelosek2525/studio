@@ -1,4 +1,4 @@
-import type { Guide } from './types';
+import type { Guide, Glossary } from './types';
 
 export const registrationGuide: Guide = {
   title: "Residence Registration Step-by-Step",
@@ -8,15 +8,15 @@ export const registrationGuide: Guide = {
   readingTime: 8,
   tldr: [
     "Book an appointment online at the foreign police or municipal office.",
-    "Bring your passport, proof of accommodation, and fee stamps (kolky).",
-    "Pay the 200 CZK fee and receive your confirmation.",
+    "Bring your passport, proof of accommodation, and fee stamps ({glossary:kolky}).",
+    "Pay the {currency:200:CZK} fee and receive your confirmation.",
     "Report any changes within 3 working days."
   ],
   requirements: [
     "Passport or National ID card",
     "Proof of accommodation (original document)",
     "Application form (filled out)",
-    "200 CZK administrative fee (usually as stamps)"
+    "{currency:200:CZK} administrative fee (usually as stamps)"
   ],
   links: [
     { label: "Ministry of the Interior – Registration", url: "#" },
@@ -47,7 +47,7 @@ export const registrationGuide: Guide = {
     },
     {
       question: "Can I pay the fee with a card?",
-      answer: "It depends on the office. Many smaller offices only accept fee stamps ('kolky'), which can be purchased at any post office. It's safer to have the stamps ready beforehand."
+      answer: "It depends on the office. Many smaller offices only accept fee stamps ('{glossary:kolky}'), which can be purchased at any post office. It's safer to have the stamps ready beforehand."
     }
   ],
   callout: {
@@ -55,3 +55,11 @@ export const registrationGuide: Guide = {
     text: 'Appointment slots are released periodically. Check the booking system early in the morning for the best chance of securing a spot.'
   }
 };
+
+
+export const glossary: Glossary = {
+  'kolky': {
+    term: 'Kolky',
+    definition: 'Fee stamps used in the Czech Republic for administrative payments. They can be purchased at any post office in various denominations. Think of them as a pre-paid receipt for official fees.'
+  }
+}

@@ -1,5 +1,6 @@
 import type { FAQItem } from '@/lib/types';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { renderContent } from './glossary';
 
 interface FaqProps {
   items: FAQItem[];
@@ -16,7 +17,7 @@ export function Faq({ items }: FaqProps) {
               {item.question}
             </AccordionTrigger>
             <AccordionContent className="text-foreground/80">
-              {item.answer}
+              {renderContent(item.answer)}
             </AccordionContent>
           </AccordionItem>
         ))}

@@ -1,5 +1,6 @@
 import { ListChecks } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { renderContent } from './glossary';
 
 interface TldrProps {
   items: string[];
@@ -17,7 +18,7 @@ export function Tldr({ items }: TldrProps) {
       <CardContent>
         <ul className="space-y-2 list-disc pl-5 text-foreground/90">
           {items.map((item, index) => (
-            <li key={index}>{item}</li>
+            <li key={index}>{renderContent(item)}</li>
           ))}
         </ul>
       </CardContent>

@@ -29,3 +29,10 @@ export interface Guide {
     text: string;
   } | null;
 }
+
+export interface GlossaryEntry {
+  term: string;
+  definition: string;
+}
+
+export type Glossary = Record<string, GlossaryEntry>;

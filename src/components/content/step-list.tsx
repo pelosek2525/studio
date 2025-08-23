@@ -1,4 +1,5 @@
 import type { Step } from '@/lib/types';
+import { renderContent } from './glossary';
 
 interface StepListProps {
   steps: Step[];
@@ -17,7 +18,7 @@ export function StepList({ steps }: StepListProps) {
             <h3 className="flex items-center mb-1 text-lg font-semibold text-foreground font-headline">
               {step.title}
             </h3>
-            <p className="mb-4 text-base font-normal text-foreground/80">{step.details}</p>
+            <p className="mb-4 text-base font-normal text-foreground/80">{renderContent(step.details)}</p>
           </li>
         ))}
       </ol>
