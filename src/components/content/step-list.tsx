@@ -1,3 +1,5 @@
+'use client';
+
 import type { Step } from '@/lib/types';
 import { renderContent } from './glossary';
 

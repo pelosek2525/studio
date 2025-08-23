@@ -1,3 +1,5 @@
+'use client';
+
 import type { FAQItem } from '@/lib/types';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { renderContent } from './glossary';
