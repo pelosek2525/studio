@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Compass } from 'lucide-react';
+import { Menu, Compass, Search } from 'lucide-react';
 
 const navLinks = [
   { href: '/guides', label: 'Guides' },
   { href: '/tools', label: 'Tools' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 export default function Header() {
@@ -16,7 +17,7 @@ export default function Header() {
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Compass className="h-6 w-6 text-primary" />
             <span className="font-bold font-headline text-lg sm:inline-block">
-              CityZen Guide
+              City Guide
             </span>
           </Link>
           <nav className="hidden gap-6 text-sm md:flex">
@@ -32,6 +33,10 @@ export default function Header() {
           </nav>
         </div>
         <div className="flex flex-1 items-center justify-end space-x-2">
+          <Button variant="ghost" size="icon">
+            <Search className="h-5 w-5" />
+            <span className="sr-only">Search</span>
+          </Button>
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="md:hidden">
@@ -44,7 +49,7 @@ export default function Header() {
                 <Link href="/" className="mb-4 flex items-center space-x-2">
                   <Compass className="h-6 w-6 text-primary" />
                   <span className="font-bold font-headline text-lg">
-                    CityZen Guide
+                    City Guide
                   </span>
                 </Link>
                 {navLinks.map((link) => (
