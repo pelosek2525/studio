@@ -6,6 +6,7 @@ export default {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './content/**/*.md',
   ],
   theme: {
     container: {
@@ -21,6 +22,38 @@ export default {
         headline: ['Belleza', 'sans-serif'],
         code: ['monospace'],
       },
+      typography: (theme: (arg0: string) => any) => ({
+        DEFAULT: {
+          css: {
+            color: theme('colors.foreground'),
+            a: {
+              color: theme('colors.primary.DEFAULT'),
+              '&:hover': {
+                color: theme('colors.primary.DEFAULT'),
+              },
+            },
+            h1: {
+                color: theme('colors.primary.DEFAULT'),
+                fontFamily: theme('fontFamily.headline'),
+            },
+            h2: {
+                color: theme('colors.primary.DEFAULT'),
+                fontFamily: theme('fontFamily.headline'),
+            },
+            h3: {
+                color: theme('colors.primary.DEFAULT'),
+                fontFamily: theme('fontFamily.headline'),
+            },
+            h4: {
+                color: theme('colors.primary.DEFAULT'),
+                fontFamily: theme('fontFamily.headline'),
+            },
+            strong: {
+                color: theme('colors.foreground'),
+            },
+          },
+        },
+      }),
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
@@ -102,5 +135,8 @@ export default {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [
+    require('tailwindcss-animate'),
+    require('@tailwindcss/typography'),
+],
 } satisfies Config;

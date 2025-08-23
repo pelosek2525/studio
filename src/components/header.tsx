@@ -4,10 +4,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Compass } from 'lucide-react';
 
 const navLinks = [
-  { href: '/move/registration', label: 'Move' },
-  { href: '/live', label: 'Live' },
-  { href: '/money', label: 'Money' },
-  { href: '/how-to', label: 'How-To Guides' },
+  { href: '/guides', label: 'Guides' },
   { href: '/tools', label: 'Tools' },
 ];
 
