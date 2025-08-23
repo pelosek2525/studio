@@ -3,7 +3,10 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
+import { JSDOM } from 'jsdom';
+import React from 'react';
 import type { GuideCategory, Guide, Glossary, GuideMetadata } from './types';
+import { Currency } from '@/components/content/currency';
 
 const guidesDirectory = path.join(process.cwd(), 'content/guides');
 const glossaryPath = path.join(process.cwd(), 'content/glossary.json');
@@ -60,6 +63,45 @@ export function getGuidesForCategory(categorySlug: string): { meta: GuideMetadat
   });
 }
 
+function processNode(node: Node): Node {
+    if (node.nodeType === 3) { // Text node
+        const text = node.textContent || '';
+        const parent = node.parentNode!;
+        
+        const parts = text.split(/({glossary:[a-zA-Z0-9_-]+})|({currency:\d+:[A-Z]{3}})/g).filter(Boolean);
+
+        if (parts.length > 1) {
+            parts.forEach(part => {
+                const glossaryMatch = part.match(/{glossary:([a-zA-Z0-9_-]+)}/);
+                if (glossaryMatch) {
+                    const termId = glossaryMatch[1];
+                    const button = parent.ownerDocument.createElement('button');
+                    button.setAttribute('data-glossary-term', termId);
+                    button.textContent = termId.replace(/_/g, ' ');
+                    parent.insertBefore(button, node);
+                    return;
+                }
+                
+                const currencyMatch = part.match(/{currency:(\d+):([A-Z]{3})}/);
+                if (currencyMatch) {
+                    const [, amount, currency] = currencyMatch;
+                    const span = parent.ownerDocument.createElement('span');
+                    span.setAttribute('data-currency-amount', amount);
+                    span.setAttribute('data-currency-code', currency);
+                    parent.insertBefore(span, node);
+                    return;
+                }
+    
+                parent.insertBefore(parent.ownerDocument.createTextNode(part), node);
+            });
+            parent.removeChild(node);
+        }
+    } else if (node.nodeType === 1) { // Element node
+        Array.from(node.childNodes).forEach(child => processNode(child));
+    }
+    return node;
+}
+
 
 export async function getGuide(category: string, slug: string): Promise<Guide | null> {
   const filePath = path.join(guidesDirectory, category, `${slug}.md`);
@@ -71,9 +113,13 @@ export async function getGuide(category: string, slug: string): Promise<Guide | 
   const matterResult = matter(fileContents);
 
   const processedContent = await remark()
-    .use(html)
+    .use(html, { sanitize: false })
     .process(matterResult.content);
-  const contentHtml = processedContent.toString();
+  
+  const dom = new JSDOM(processedContent.toString());
+  const body = dom.window.document.body;
+  
+  processNode(body);
 
   return {
     meta: {
@@ -84,7 +130,7 @@ export async function getGuide(category: string, slug: string): Promise<Guide | 
       updatedAt: matterResult.data.updatedAt,
       readingTime: matterResult.data.readingTime,
     },
-    content: contentHtml,
+    content: body.innerHTML,
   };
 }
 

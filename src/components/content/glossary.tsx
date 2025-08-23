@@ -9,9 +9,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from '@/components/ui/dialog';
-import { Currency } from './currency';
 import type { Glossary } from '@/lib/types';
-import { JSDOM } from 'jsdom';
 
 
 // --- CONTEXT ---
@@ -53,80 +51,22 @@ export const GlossaryWrapper = ({ children }: { children: React.ReactNode }) => 
   );
 };
 
-
-// --- RENDERER ---
-const processNode = (node: Node, keyPrefix: string): React.ReactNode => {
-    if (node.nodeType === 3) { // Text node
-        const text = node.textContent || '';
-        const parts = text.split(/({glossary:[a-zA-Z0-9_-]+})|({currency:\d+:[A-Z]{3}})/g).filter(Boolean);
-
-        return parts.map((part, index) => {
-            const glossaryMatch = part.match(/{glossary:([a-zA-Z0-9_-]+)}/);
-            if (glossaryMatch) {
-                const termId = glossaryMatch[1];
-                return <GlossaryTerm key={`${keyPrefix}-${index}`} termId={termId} />;
-            }
-            
-            const currencyMatch = part.match(/{currency:(\d+):([A-Z]{3})}/);
-            if (currencyMatch) {
-                const [, amount, currency] = currencyMatch;
-                return <Currency key={`${keyPrefix}-${index}`} amount={Number(amount)} currency={currency} />;
-            }
-
-            return <React.Fragment key={`${keyPrefix}-${index}`}>{part}</React.Fragment>;
-        });
-    }
-
-    if (node.nodeType === 1) { // Element node
-        const element = node as Element;
-        const tagName = element.tagName.toLowerCase();
-        
-        const children = Array.from(element.childNodes).map((child, i) => processNode(child, `${keyPrefix}-${tagName}-${i}`));
-
-        const props: { [key: string]: any } = { key: keyPrefix };
-        for (let i = 0; i < element.attributes.length; i++) {
-            const attr = element.attributes[i];
-            if(attr.name === 'class'){
-                props.className = attr.value;
-            } else {
-                props[attr.name] = attr.value;
-            }
-        }
-
-        return React.createElement(tagName, props, children);
-    }
-    
-    return null;
-}
-
-export const renderContent = (htmlContent: string) => {
-  if (typeof window === 'undefined') {
-    // This is a simple server-side fallback to avoid using JSDOM on the server
-    // for this particular function. It will just render the HTML as is.
-    return <div dangerouslySetInnerHTML={{ __html: htmlContent }} />;
-  }
-  const dom = new JSDOM(`<!DOCTYPE html><body>${htmlContent}</body>`);
-  const body = dom.window.document.body;
-  return Array.from(body.childNodes).map((node, index) => processNode(node, `node-${index}`));
-};
-
-
 // --- TERM ---
 interface GlossaryTermProps {
   termId: string;
+  children: React.ReactNode;
 }
 
-function GlossaryTerm({ termId }: GlossaryTermProps) {
+export function GlossaryTerm({ termId, children }: GlossaryTermProps) {
   const { openGlossary } = useGlossary();
-  const displayTerm = termId.replace(/_/g, ' ');
-
+  
   return (
     <Button
       variant="link"
       className="p-0 h-auto text-base align-baseline text-accent border-b border-accent border-dashed rounded-none"
       onClick={() => openGlossary(termId)}
     >
-      {displayTerm}
+      {children}
     </Button>
   );
 }

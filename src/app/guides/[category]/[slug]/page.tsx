@@ -1,8 +1,8 @@
-import { getGuide, getGlossary, getAllGuidePaths } from '@/lib/guides';
+import { getGuide, getAllGuidePaths } from '@/lib/guides';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import { Calendar, Clock } from 'lucide-react';
-import { GlossaryWrapper, GlossaryDialog, renderContent } from '@/components/content/glossary';
+import { GuideContent } from '@/components/content/guide-content';
 
 type Props = {
   params: {
@@ -34,36 +34,31 @@ export default async function GuidePage({ params }: Props) {
     notFound();
   }
 
-  const glossary = getGlossary();
-
   return (
-    <GlossaryWrapper>
-        <div className="container max-w-4xl py-12">
-            <article>
-            <header className="mb-8">
-                <h1 className="font-headline text-4xl font-bold tracking-tight text-primary md:text-5xl">
-                {guide.meta.title}
-                </h1>
-                <div className="mt-4 flex items-center space-x-4 text-sm text-muted-foreground">
-                <div className="flex items-center gap-2">
-                    <Calendar className="h-4 w-4" />
-                    <span>Last updated on {guide.meta.updatedAt}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                    <Clock className="h-4 w-4" />
-                    <span>{guide.meta.readingTime} min read</span>
-                </div>
-                </div>
-            </header>
-            
-            <div className="prose dark:prose-invert max-w-none text-foreground/90 text-lg">
-                {renderContent(guide.content)}
+    <div className="container max-w-4xl py-12">
+        <article>
+        <header className="mb-8">
+            <h1 className="font-headline text-4xl font-bold tracking-tight text-primary md:text-5xl">
+            {guide.meta.title}
+            </h1>
+            <div className="mt-4 flex items-center space-x-4 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2">
+                <Calendar className="h-4 w-4" />
+                <span>Last updated on {guide.meta.updatedAt}</span>
             </div>
-            
-            </article>
+            <div className="flex items-center gap-2">
+                <Clock className="h-4 w-4" />
+                <span>{guide.meta.readingTime} min read</span>
+            </div>
+            </div>
+        </header>
+        
+        <div className="prose dark:prose-invert max-w-none text-foreground/90 text-lg">
+            <GuideContent content={guide.content} />
         </div>
-        <GlossaryDialog glossary={glossary} />
-    </GlossaryWrapper>
+        
+        </article>
+    </div>
   );
 }
 
