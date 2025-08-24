@@ -68,7 +68,7 @@ const processNode = (node: Node, keyPrefix: string): React.ReactNode => {
         try {
              // If a paragraph only contains a widget, don't render the <p> tag.
             if (tagName === 'p' && element.childNodes.length === 1 && (element.firstChild as Element)?.tagName?.toLowerCase() === 'widget') {
-                return <>{children}</>;
+                return children[0];
             }
             return React.createElement(tagName, props, children);
         } catch(e) {
