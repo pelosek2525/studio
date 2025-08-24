@@ -1,3 +1,4 @@
+
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -68,7 +69,9 @@ function processNode(node: Node): Node {
         const text = node.textContent || '';
         const parent = node.parentNode!;
         
-        const parts = text.split(/({glossary:[a-zA-Z0-9_-]+})|({currency:\d+:[A-Z]{3}})/g).filter(Boolean);
+        // Corrected Regex
+        const regex = /({glossary:[a-zA-Z0-9_-]+})|({currency:\d+:[A-Z]{3}})/g;
+        const parts = text.split(regex).filter(Boolean);
 
         if (parts.length > 1) {
             parts.forEach(part => {
@@ -77,7 +80,7 @@ function processNode(node: Node): Node {
                     const termId = glossaryMatch[1];
                     const button = parent.ownerDocument.createElement('button');
                     button.setAttribute('data-glossary-term', termId);
-                    button.textContent = termId.replace(/_/g, ' ');
+                    button.textContent = termId.replace(/-/g, ' ');
                     parent.insertBefore(button, node);
                     return;
                 }
