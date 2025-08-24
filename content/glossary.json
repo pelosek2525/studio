@@ -6,10 +6,17 @@
   "SOLUS":{
     "term": "SOLUS",
     "definition":"register"
-  }, 
+  },
   "kauce":{
     "term": "kauce",
     "definition": "Záloha na nájem, kterou platí nájemník pronajímateli k zajištění případných škod na majetku nebo neuhrazeného nájemného. Obvykle se jedná o částku odpovídající jednomu až třem měsícům nájmu."
-
+  },
+  "registr-obyvatel": {
+    "term": "Registr obyvatel",
+    "definition": "The official Register of Inhabitants of the Czech Republic, maintained by the Ministry of the Interior. It contains the primary legal identity of all residents."
+  },
+  "matricni-doklad": {
+    "term": "Matriční doklad",
+    "definition": "A Czech civil status or registry document, such as a birth certificate or marriage certificate. These documents are the primary source for your official identity within the Czech system."
   }
 }
