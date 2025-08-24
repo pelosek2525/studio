@@ -1,44 +1,44 @@
 
 {
   "Header": {
-    "guides": "Guides",
-    "tools": "Tools",
-    "contact": "Contact",
-    "title": "City Guide"
+    "guides": "Посібники",
+    "tools": "Інструменти",
+    "contact": "Контакти",
+    "title": "Путівник по місту"
   },
   "Footer": {
-    "contact": "Contact",
-    "donate": "Donate",
-    "privacy": "Privacy",
-    "terms": "Terms and conditions"
+    "contact": "Контакти",
+    "donate": "Підтримати",
+    "privacy": "Конфіденційність",
+    "terms": "Правила та умови"
   },
   "HomePage": {
-    "welcome": "Welcome to Prague",
-    "subtitle": "This is the start of a great adventure! Let's get you ready for it.",
-    "primaryAction1": "Move to Prague",
-    "primaryAction2": "Find a job",
-    "primaryAction3": "Start a business",
-    "secondaryTitle": "What do you need?",
-    "secondaryAction1": "An apartment",
-    "secondaryAction2": "A residence permit",
-    "secondaryAction3": "A bank account",
-    "secondaryAction4": "Health insurance",
-    "secondaryAction5": "Liability insurance",
-    "secondaryAction6": "A tax ID",
-    "secondaryAction7": "A bicycle",
-    "secondaryAction8": "A vehicle",
-    "secondaryAction9": "Professional help",
-    "allGuidesButton": "See all guides"
+    "welcome": "Ласкаво просимо до Праги",
+    "subtitle": "Це початок великої пригоди! Давайте підготуємо вас до неї.",
+    "primaryAction1": "Переїхати до Праги",
+    "primaryAction2": "Знайти роботу",
+    "primaryAction3": "Розпочати бізнес",
+    "secondaryTitle": "Що вам потрібно?",
+    "secondaryAction1": "Квартира",
+    "secondaryAction2": "Дозвіл на проживання",
+    "secondaryAction3": "Банківський рахунок",
+    "secondaryAction4": "Медичне страхування",
+    "secondaryAction5": "Страхування відповідальності",
+    "secondaryAction6": "Податковий номер",
+    "secondaryAction7": "Велосипед",
+    "secondaryAction8": "Транспортний засіб",
+    "secondaryAction9": "Професійна допомога",
+    "allGuidesButton": "Переглянути всі посібники"
   },
   "GuidesIndexPage": {
-    "title": "Guides about Prague",
-    "description": "Your comprehensive resource for navigating life in the city.",
-    "searchPlaceholder": "Search this website"
+    "title": "Посібники по Празі",
+    "description": "Ваш комплексний ресурс для навігації життям у місті.",
+    "searchPlaceholder": "Пошук на цьому сайті"
   },
   "GuidePage": {
-    "onThisPage": "On this page",
-    "relatedGuides": "Related guides",
-    "lastUpdated": "Last updated on",
-    "readingTime": "min read"
+    "onThisPage": "На цій сторінці",
+    "relatedGuides": "Схожі посібники",
+    "lastUpdated": "Останнє оновлення",
+    "readingTime": "хв. читання"
   }
 }

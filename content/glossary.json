@@ -2,66 +2,66 @@
 {
   "kolky": {
     "term": "Kolky",
-    "definition": "Fee stamps used in the Czech Republic for administrative payments. They can be purchased at any post office in various denominations. Think of them as a pre-paid receipt for official fees."
+    "definition": "Гербові марки, що використовуються в Чеській Республіці для адміністративних платежів. Їх можна придбати на будь-якому поштовому відділенні в різних номіналах. Вважайте їх передоплаченою квитанцією за офіційні збори."
   },
   "SOLUS":{
     "term": "SOLUS",
-    "definition":"register"
+    "definition":"Реєстр боржників, який використовується банками та небанківськими установами для перевірки кредитної історії клієнтів."
   },
   "kauce":{
     "term": "kauce",
-    "definition": "Záloha na nájem, kterou platí nájemník pronajímateli k zajištění případných škod na majetku nebo neuhrazeného nájemného. Obvykle se jedná o částku odpovídající jednomu až třem měsícům nájmu."
+    "definition": "Застава за оренду, яку орендар сплачує орендодавцю для забезпечення можливих збитків майну або несплаченої орендної плати. Зазвичай це сума, що відповідає одному-трьом місяцям оренди."
   },
   "registr-obyvatel": {
     "term": "Registr obyvatel",
-    "definition": "The official Register of Inhabitants of the Czech Republic, maintained by the Ministry of the Interior. It contains the primary legal identity of all residents."
+    "definition": "Офіційний Реєстр мешканців Чеської Республіки, який веде Міністерство внутрішніх справ. Він містить основну юридичну інформацію про всіх жителів."
   },
   "matricni-doklad": {
     "term": "Matriční doklad",
-    "definition": "A Czech civil status or registry document, such as a birth certificate or marriage certificate. These documents are the primary source for your official identity within the Czech system."
+    "definition": "Чеський документ про цивільний стан, такий як свідоцтво про народження або свідоцтво про шлюб. Ці документи є основним джерелом вашої офіційної ідентичності в чеській системі."
   },
   "ministry-of-interior": {
     "term": "Ministry of the Interior",
-    "definition": "The Ministry of the Interior of the Czech Republic (Ministerstvo vnitra) is the central government body responsible for public administration, including matters related to foreigners' residence, identity documents, and immigration.<br/><br/><strong>Useful Links:</strong><br/><a href=\"/guides/bureaucracy/how-to-get-a-foreigner-police-appointment\" class=\"text-primary underline\">How to book an appointment</a><br/><a href=\"/guides/bureaucracy/how-the-immigration-office-works\" class=\"text-primary underline\">How the immigration office works</a>"
+    "definition": "Міністерство внутрішніх справ Чеської Республіки (Ministerstvo vnitra) є центральним державним органом, відповідальним за державне управління, включаючи питання, пов'язані з проживанням іноземців, документами, що посвідчують особу, та імміграцією.<br/><br/><strong>Корисні посилання:</strong><br/><a href=\"/guides/bureaucracy/how-to-get-a-foreigner-police-appointment\" class=\"text-primary underline\">Як записатися на прийом</a><br/><a href=\"/guides/bureaucracy/how-the-immigration-office-works\" class=\"text-primary underline\">Як працює імміграційне управління</a>"
   },
   "zdravotni-pojisteni": {
     "term": "Zdravotní pojištění",
-    "definition": "Health insurance. This is mandatory for all residents in Czechia. It can be either public (veřejné) or private (komerční), depending on your residency status and employment."
+    "definition": "Медичне страхування. Воно є обов'язковим для всіх жителів Чехії. Може бути державним (veřejné) або приватним (komerční), залежно від вашого статусу проживання та працевлаштування."
   },
   "verejne-zdravotni-pojisteni": {
     "term": "Veřejné zdravotní pojištění",
-    "definition": "Public health insurance. This is the state-run health insurance system that most employees, permanent residents, and EU citizens are a part of."
+    "definition": "Державне медичне страхування. Це державна система медичного страхування, до якої належить більшість працівників, постійних мешканців та громадян ЄС."
   },
   "komercni-zdravotni-pojisteni": {
     "term": "Komerční zdravotní pojištění",
-    "definition": "Private or commercial health insurance. This is required for most non-EU citizens who are not permanent residents, such as freelancers or students."
+    "definition": "Приватне або комерційне медичне страхування. Воно є обов'язковим для більшості громадян країн, що не входять до ЄС, які не є постійними мешканцями, наприклад, для фрілансерів або студентів."
   },
   "autopojisteni": {
     "term": "Autopojištění",
-    "definition": "Car insurance. A general term for insurance related to a vehicle."
+    "definition": "Автострахування. Загальний термін для страхування, пов'язаного з транспортним засобом."
   },
   "povinne-ruceni": {
     "term": "Povinné ručení",
-    "definition": "Mandatory third-party liability insurance for vehicles. It covers damages you might cause to other people's property or health. It is illegal to drive without it."
+    "definition": "Обов'язкове страхування цивільно-правової відповідальності власників транспортних засобів. Воно покриває збитки, які ви можете завдати майну або здоров'ю інших людей. Їздити без нього незаконно."
   },
   "havarijni-pojisteni": {
     "term": "Havarijní pojištění",
-    "definition": "Optional collision or comprehensive car insurance. It covers damages to your own vehicle from accidents, theft, vandalism, or natural disasters."
+    "definition": "Необов'язкове страхування від зіткнень або комплексне автострахування (КАСКО). Воно покриває пошкодження вашого власного автомобіля внаслідок аварії, крадіжки, вандалізму або стихійних лих."
   },
   "pojisteni-odpovednosti": {
     "term": "Pojištění odpovědnosti",
-    "definition": "Civil liability insurance. This covers accidental damages you cause to others' property or health in your daily life (not related to driving). It is highly recommended and usually very affordable."
+    "definition": "Страхування цивільної відповідальності. Воно покриває випадкові збитки, завдані вами майну або здоров'ю інших людей у повсякденному житті (не пов'язані з керуванням автомобілем). Дуже рекомендується і зазвичай дуже доступне."
   },
   "pojisteni-domacnosti": {
     "term": "Pojištění domácnosti",
-    "definition": "Household insurance. This covers your personal belongings inside your home (furniture, electronics, etc.) against risks like theft, fire, or water damage. It is typically purchased by the tenant."
+    "definition": "Страхування домашнього майна. Воно покриває ваші особисті речі всередині будинку (меблі, електроніку тощо) від таких ризиків, як крадіжка, пожежа або пошкодження водою. Зазвичай його оформлює орендар."
   },
   "pojisteni-nemovitosti": {
     "term": "Pojištění nemovitosti",
-    "definition": "Property insurance. This covers the physical structure of the building itself (walls, roof, windows). It is typically purchased by the landlord or property owner."
+    "definition": "Страхування нерухомості. Воно покриває саму фізичну конструкцію будівлі (стіни, дах, вікна). Зазвичай його оформлює орендодавець або власник нерухомості."
   },
   "pojisteni-pravni-ochrany": {
     "term": "Pojištění právní ochrany",
-    "definition": "Legal insurance. This covers the costs of legal disputes, such as lawyer fees and court costs. It can be useful for issues with landlords, employers, or other contracts."
+    "definition": "Юридичне страхування. Воно покриває витрати на юридичні спори, такі як гонорари адвокатів та судові витрати. Може бути корисним у питаннях з орендодавцями, роботодавцями або іншими договорами."
   }
 }
