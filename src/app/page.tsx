@@ -1,12 +1,12 @@
 import Link from 'next/link';
-import { ArrowRight, Building, Briefcase, Store, Home as HomeIcon, FileText, Banknote, ShieldCheck, Shield, Bike, Car, Users } from 'lucide-react';
+import { ArrowRight, Building, Briefcase, Store, HomeIcon, FileText, Banknote, ShieldCheck, Shield, Bike, Car, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
 const primaryActions = [
   {
     icon: <Building className="h-10 w-10 text-foreground/80" />,
-    title: 'Move to Berlin',
+    title: 'Move to Prague',
     href: '/guides/moving-to-prague',
   },
   {
@@ -22,15 +22,15 @@ const primaryActions = [
 ];
 
 const secondaryActions = [
-    { title: 'An apartment', href: '/guides/apartment-life', icon: <HomeIcon className="h-8 w-8 text-foreground/80" /> },
-    { title: 'An Anmeldung', href: '/guides/moving-to-prague/residence-registration', icon: <FileText className="h-8 w-8 text-foreground/80" /> },
-    { title: 'A bank account', href: '/guides/personal-finance/opening-a-bank-account', icon: <Banknote className="h-8 w-8 text-foreground/80" /> },
-    { title: 'Health insurance', href: '/guides/insurance', icon: <ShieldCheck className="h-8 w-8 text-foreground/80" /> },
-    { title: 'Liability insurance', href: '/guides/insurance', icon: <Shield className="h-8 w-8 text-foreground/80" /> },
-    { title: 'A Schufa', href: '/guides/bureaucracy', icon: <FileText className="h-8 w-8 text-foreground/80" /> },
-    { title: 'A bicycle', href: '/guides/getting-around', icon: <Bike className="h-8 w-8 text-foreground/80" /> },
-    { title: 'A vehicle', href: '/guides/driving', icon: <Car className="h-8 w-8 text-foreground/80" /> },
-    { title: 'Professional help', href: '/guides/legal-matters', icon: <Users className="h-8 w-8 text-foreground/80" /> },
+    { title: 'An apartment', href: '/guides/apartment-life/how-to-find-an-apartment', icon: <HomeIcon className="h-8 w-8 text-foreground/80" /> },
+    { title: 'A residence permit', href: '/guides/immigration/how-to-get-a-residence-permit', icon: <FileText className="h-8 w-8 text-foreground/80" /> },
+    { title: 'A bank account', href: '/guides/personal-finance/how-to-choose-a-bank', icon: <Banknote className="h-8 w-8 text-foreground/80" /> },
+    { title: 'Health insurance', href: '/guides/insurance/how-to-choose-health-insurance', icon: <ShieldCheck className="h-8 w-8 text-foreground/80" /> },
+    { title: 'Liability insurance', href: '/guides/insurance/how-to-choose-liability-insurance', icon: <Shield className="h-8 w-8 text-foreground/80" /> },
+    { title: 'A tax ID', href: '/guides/bureaucracy/tax-id-tax-number-and-vat-number', icon: <FileText className="h-8 w-8 text-foreground/80" /> },
+    { title: 'A bicycle', href: '/guides/getting-around/how-to-buy-and-ride-a-bicycle', icon: <Bike className="h-8 w-8 text-foreground/80" /> },
+    { title: 'A vehicle', href: '/guides/driving/how-to-buy-a-car', icon: <Car className="h-8 w-8 text-foreground/80" /> },
+    { title: 'Professional help', href: '/guides/where-to-find/where-to-find-help', icon: <Users className="h-8 w-8 text-foreground/80" /> },
 ];
 
 
