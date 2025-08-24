@@ -11,7 +11,6 @@ import {
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import { Progress } from '@/components/ui/progress';
-import checklistData from '@/content/checklist.json';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 
@@ -27,9 +26,15 @@ interface ChecklistCategory {
   items: ChecklistItem[];
 }
 
+interface MovingChecklistProps {
+  checklistData: {
+    categories: ChecklistCategory[];
+  };
+}
+
 const STORAGE_KEY = 'movingChecklistState';
 
-export function MovingChecklist() {
+export function MovingChecklist({ checklistData }: MovingChecklistProps) {
   const [checkedItems, setCheckedItems] = useState<Record<string, boolean>>({});
   const [isClient, setIsClient] = useState(false);
 

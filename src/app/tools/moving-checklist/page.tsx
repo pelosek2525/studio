@@ -1,6 +1,7 @@
 
 import { MovingChecklist } from '@/components/tools/moving-checklist';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import checklistData from '@/../content/checklist.json';
 
 export default function MovingChecklistPage() {
   return (
@@ -20,7 +21,7 @@ export default function MovingChecklistPage() {
           <CardDescription>Váš postup se automaticky ukládá v prohlížeči.</CardDescription>
         </CardHeader>
         <CardContent>
-            <MovingChecklist />
+            <MovingChecklist checklistData={checklistData} />
         </CardContent>
       </Card>
     </div>
