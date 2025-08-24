@@ -6,3 +6,5 @@ readingTime: 5
 ---
 
 Content coming soon...
+
+{widget:net-salary-calculator}

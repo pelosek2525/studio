@@ -69,7 +69,7 @@ function processNode(node: Node): Node {
         const text = node.textContent || '';
         const parent = node.parentNode!;
         
-        const regex = /({glossary:[a-zA-Z0-9_-]+})|({currency:\d+:[A-Z]{3}})|({widget:[a-zA-Z0-9_-]+})/g;
+        const regex = /({glossary:[a-zA-Z0-9_-]+})|({currency:[\d,]+:[A-Z]{3}})|({widget:[a-zA-Z0-9_-]+})/g;
         const parts = text.split(regex).filter(Boolean);
 
         if (parts.length > 1) {
@@ -84,11 +84,11 @@ function processNode(node: Node): Node {
                     return;
                 }
                 
-                const currencyMatch = part.match(/{currency:(\d+):([A-Z]{3})}/);
+                const currencyMatch = part.match(/{currency:([\d,]+):([A-Z]{3})}/);
                 if (currencyMatch) {
                     const [, amount, currency] = currencyMatch;
                     const span = parent.ownerDocument.createElement('span');
-                    span.setAttribute('data-currency-amount', amount);
+                    span.setAttribute('data-currency-amount', amount.replace(/,/g, ''));
                     span.setAttribute('data-currency-code', currency);
                     parent.insertBefore(span, node);
                     return;
