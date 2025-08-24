@@ -106,10 +106,13 @@ export function MovingChecklist({ checklistData }: MovingChecklistProps) {
                       </p>
                     </div>
                     {item.link && (
-                      <Link href={item.link} passHref legacyBehavior>
-                        <a target="_blank" rel="noopener noreferrer" className="ml-4 p-2 text-primary hover:underline flex items-center text-sm">
-                          Průvodce <ArrowUpRight className="h-4 w-4 ml-1" />
-                        </a>
+                      <Link
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="ml-4 p-2 text-primary hover:underline flex items-center text-sm"
+                      >
+                        Průvodce <ArrowUpRight className="h-4 w-4 ml-1" />
                       </Link>
                     )}
                   </div>
