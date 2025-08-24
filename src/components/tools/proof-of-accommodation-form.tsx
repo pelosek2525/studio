@@ -2,7 +2,6 @@
 'use client';
 
 import { useState, useRef } from 'react';
-import { useReactToPrint } from 'react-to-print';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -37,10 +36,32 @@ export function ProofOfAccommodationForm() {
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const printRef = useRef<HTMLDivElement>(null);
 
-  const handlePrint = useReactToPrint({
-    content: () => printRef.current,
-    documentTitle: 'Doklad-o-zajisteni-ubytovani',
-  });
+  const handlePrint = () => {
+    const printableElement = printRef.current;
+    if (!printableElement) return;
+
+    const printStyles = document.createElement('style');
+    printStyles.id = 'print-styles';
+    printStyles.innerHTML = `
+      @media print {
+        body * {
+          visibility: hidden;
+        }
+        #printable-area, #printable-area * {
+          visibility: visible;
+        }
+        #printable-area {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+        }
+      }
+    `;
+    document.head.appendChild(printStyles);
+    window.print();
+    document.head.removeChild(printStyles);
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -175,9 +196,9 @@ export function ProofOfAccommodationForm() {
       </Button>
 
       {/* Hidden Printable Component */}
-      <div className="hidden">
-        <div ref={printRef}>
-          <ProofOfAccommodationDocument formData={formData} />
+      <div id="printable-area" ref={printRef}>
+        <div className="hidden print:block">
+            <ProofOfAccommodationDocument formData={formData} />
         </div>
       </div>
     </div>
