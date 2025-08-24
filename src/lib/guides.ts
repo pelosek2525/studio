@@ -74,46 +74,40 @@ function processNode(node: Node, glossary: Glossary): void {
         }
 
         const regex = /({glossary:([a-zA-Z0-9_-]+)})|({currency:([\d,]+):([A-Z]{3})})/g;
-        let lastIndex = 0;
+        
+        const parts = text.split(regex);
+        if(parts.length === 1) return;
+
         const fragment = parent.ownerDocument.createDocumentFragment();
-        let match;
 
-        while ((match = regex.exec(text)) !== null) {
-            // Add text before the match
-            if (match.index > lastIndex) {
-                fragment.appendChild(parent.ownerDocument.createTextNode(text.substring(lastIndex, match.index)));
-            }
+        for (let i = 0; i < parts.length; i++) {
+            const part = parts[i];
+            if (!part) continue;
 
-            // Handle glossary match
-            if (match[1]) {
-                const termId = match[2];
-                const termText = glossary[termId]?.term || termId.replace(/-/g, ' ');
-                const button = parent.ownerDocument.createElement('button');
-                button.setAttribute('data-glossary-term', termId);
-                button.textContent = termText;
-                fragment.appendChild(button);
-            } 
-            // Handle currency match
-            else if (match[3]) {
-                const amount = match[4];
-                const currencyCode = match[5];
+            // part will be one of: the full match, a capturing group, or the text between matches
+            if (part.startsWith('{glossary:') && part.endsWith('}')) {
+                const termId = parts[i+1]; // The capturing group for the termId
+                 const termText = glossary[termId]?.term || termId.replace(/-/g, ' ');
+                 const button = parent.ownerDocument.createElement('button');
+                 button.setAttribute('data-glossary-term', termId);
+                 button.textContent = termText;
+                 fragment.appendChild(button);
+                 i+=2; // Skip the captured groups
+            } else if (part.startsWith('{currency:') && part.endsWith('}')) {
+                const amount = parts[i+3];
+                const currencyCode = parts[i+4];
                 const span = parent.ownerDocument.createElement('span');
                 span.setAttribute('data-currency-amount', amount.replace(/,/g, ''));
                 span.setAttribute('data-currency-code', currencyCode);
                 fragment.appendChild(span);
+                i+=4; // Skip the captured groups
+            } else {
+                 fragment.appendChild(parent.ownerDocument.createTextNode(part));
             }
-            
-            lastIndex = regex.lastIndex;
         }
-
-        // If there's any text left after the last match, or if no matches were found
-        if (lastIndex < text.length) {
-            fragment.appendChild(parent.ownerDocument.createTextNode(text.substring(lastIndex)));
-        }
-
-        // Only replace if we actually made changes
-        if (fragment.childNodes.length > 1 || (fragment.childNodes.length === 1 && fragment.firstChild?.nodeType !== 3)) {
-             parent.replaceChild(fragment, node);
+        
+        if (fragment.childNodes.length > 0) {
+            parent.replaceChild(fragment, node);
         }
 
     } else if (node.nodeType === 1) { // Element node
@@ -163,10 +157,8 @@ export function getAllGuidePaths() {
         }
         const files = fs.readdirSync(categoryPath);
         return files.map(file => ({
-            params: {
-                category,
-                slug: file.replace(/\.md$/, ''),
-            }
+            category,
+            slug: file.replace(/\.md$/, ''),
         }));
     });
     return paths;

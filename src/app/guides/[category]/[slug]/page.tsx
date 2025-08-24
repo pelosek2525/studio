@@ -67,5 +67,8 @@ export default async function GuidePage({ params }: Props) {
 
 export async function generateStaticParams() {
     const paths = getAllGuidePaths();
-    return paths;
+    return paths.map(path => ({
+        category: path.category,
+        slug: path.slug
+    }));
 }
