@@ -9,7 +9,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Button } from '@/components/ui/button';
 import { useLocale } from 'next-intl';
-import { useRouter, usePathname } from 'next-intl/client';
+import { useRouter, usePathname } from 'next/navigation';
 import { Globe } from 'lucide-react';
 import { useState, useTransition } from 'react';
 
