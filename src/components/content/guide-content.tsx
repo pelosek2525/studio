@@ -6,10 +6,12 @@ import { GlossaryWrapper, GlossaryDialog, GlossaryTerm } from '@/components/cont
 import { Currency } from '@/components/content/currency';
 import { JSDOM } from 'jsdom';
 import { NetSalaryCalculator } from '../tools/net-salary-calculator';
+import { ProofOfAccommodationForm } from '../tools/proof-of-accommodation-form';
 
 
 const WIDGET_MAP: Record<string, React.ComponentType> = {
     'net-salary-calculator': NetSalaryCalculator,
+    'proof-of-accommodation-form': ProofOfAccommodationForm,
 };
 
 const processNode = (node: Node, keyPrefix: string): React.ReactNode => {
