@@ -1,56 +1,56 @@
 ---
-title: "How to get a work visa"
-excerpt: "A guide to the Employee Card application process in Czechia."
+title: "Як отримати робочу візу"
+excerpt: "Посібник з процесу подання заяви на отримання Картки працівника в Чехії."
 updatedAt: "2024-08-23"
 readingTime: 2
 ---
-Pro více informací se podívejte na našeho průvodce [jak najít byt](/guides/apartment-life/how-to-find-an-apartment).
-# Jak získat zaměstnaneckou kartu v České republice
+Для отримання додаткової інформації дивіться наш посібник [як знайти квартиру](/guides/apartment-life/how-to-find-an-apartment).
+# Як отримати Картку працівника в Чеській Республіці
 
-Zaměstnanecká karta je povolení k dlouhodobému pobytu, které umožňuje občanům třetích zemí legálně žít a pracovat v České republice déle než 3 měsíce. Pokud plánujete pracovat v ČR, tento článek vám přináší přehled základních informací a postup, jak o zaměstnaneckou kartu požádat.
-
----
-
-## Kdo může žádat o zaměstnaneckou kartu?
-
-O zaměstnaneckou kartu může žádat každý občan tzv. třetí země (tedy mimo EU, EHP a Švýcarsko). Karta je určena pro všechny druhy zaměstnání, bez ohledu na požadované vzdělání nebo kvalifikaci. Výjimkou jsou členové statutárních orgánů právnických osob, pokud by jejich práce odpovídala předmětu podnikání společnosti.
+Картка працівника - це дозвіл на довгострокове проживання, який дозволяє громадянам третіх країн легально жити та працювати в Чеській Республіці понад 3 місяці. Якщо ви плануєте працювати в ЧР, ця стаття надасть вам огляд основної інформації та процедури подання заяви на отримання Картки працівника.
 
 ---
 
-## Na jak dlouho je karta vydávána?
+## Хто може подати заяву на отримання Картки працівника?
 
-Zaměstnanecká karta je vydávána na dobu maximálně 2 let. Konkrétní platnost může být omezena podle délky pracovního poměru, platnosti povolení k zaměstnání nebo rozhodnutí uznávacího orgánu.
-
----
-
-## Jaké jsou povinnosti a omezení?
-
-- **Plnění účelu pobytu:** Musíte po celou dobu pobytu plnit účel, pro který byla karta vydána.
-- **Změna zaměstnavatele nebo pozice:** Každou změnu musíte nahlásit Ministerstvu vnitra.
-- **Konec zaměstnání:** Pokud vaše zaměstnání skončí a nemáte volný vstup na trh práce, musíte do 60 dnů nastoupit do nového zaměstnání nebo podat žádost o jiné povolení k pobytu.
-- **Spolehlivý zaměstnavatel:** Zaměstnavatel nesmí být na seznamu nespolehlivých zaměstnavatelů.
+Заяву на отримання Картки працівника може подати будь-який громадянин так званої третьої країни (тобто поза ЄС, ЄЕП та Швейцарії). Картка призначена для всіх видів зайнятості, незалежно від необхідної освіти чи кваліфікації. Винятком є члени статутних органів юридичних осіб, якщо їхня робота відповідає предмету діяльності компанії.
 
 ---
 
-## Výhody zaměstnanecké karty
+## На який термін видається картка?
 
-- Možnost opakovaně vycestovat z ČR a vracet se zpět.
-- Volný pohyb po Schengenském prostoru bez nutnosti víza.
-- Právo legálně bydlet a pracovat v ČR po dobu platnosti karty.
+Картка працівника видається на термін до 2 років. Конкретний термін дії може бути обмежений тривалістю трудових відносин, дійсністю дозволу на працевлаштування або рішенням визнавального органу.
 
 ---
 
-## Jak podat žádost?
+## Які обов'язки та обмеження?
 
-1. **Mimo území ČR:** Žádost můžete podat na zastupitelském úřadě ČR ve vaší zemi.
-2. **Na území ČR:** Pokud již pobýváte v ČR s platným dlouhodobým vízem nebo povolením, můžete žádost podat na Ministerstvu vnitra.
-
----
-
-## Důležité upozornění
-
-O zaměstnaneckou kartu nemohou žádat držitelé dočasné ochrany. Pro více informací navštivte sekci „Dočasná ochrana“ na oficiálních stránkách Ministerstva vnitra.
+- **Виконання мети перебування:** Ви повинні протягом усього періоду перебування виконувати мету, для якої була видана картка.
+- **Зміна роботодавця або посади:** Кожну зміну необхідно повідомляти Міністерству внутрішніх справ.
+- **Припинення працевлаштування:** Якщо ваше працевлаштування закінчилося і у вас немає вільного доступу до ринку праці, ви повинні протягом 60 днів знайти нову роботу або подати заяву на отримання іншого дозволу на проживання.
+- **Надійний роботодавець:** Роботодавець не повинен бути у списку ненадійних роботодавців.
 
 ---
 
-**Tip:** Před podáním žádosti si zkontrolujte aktuální podmínky a požadavky na oficiálních stránkách Ministerstva vnitra ČR.
+## Переваги Картки працівника
+
+- Можливість багаторазово виїжджати з ЧР та повертатися назад.
+- Вільне пересування Шенгенською зоною без необхідності отримання візи.
+- Право легально проживати та працювати в ЧР протягом терміну дії картки.
+
+---
+
+## Як подати заяву?
+
+1.  **За межами ЧР:** Заяву можна подати в дипломатичному представництві ЧР у вашій країні.
+2.  **На території ЧР:** Якщо ви вже перебуваєте в ЧР з дійсною довгостроковою візою або дозволом, ви можете подати заяву в Міністерстві внутрішніх справ.
+
+---
+
+## Важливе зауваження
+
+Власники тимчасового захисту не можуть подавати заяву на отримання Картки працівника. Для отримання додаткової інформації відвідайте розділ «Тимчасовий захист» на офіційному сайті Міністерства внутрішніх справ ЧР.
+
+---
+
+**Порада:** Перед поданням заяви перевірте актуальні умови та вимоги на офіційному сайті Міністерства внутрішніх справ ЧР.

@@ -1,8 +1,8 @@
 ---
-title: "How apartment deposits work"
-excerpt: "Understand the process of paying and getting back your rental deposit in Czechia."
+title: "Як працюють застави за квартиру"
+excerpt: "Зрозумійте процес сплати та повернення вашої застави за оренду в Чехії."
 updatedAt: "2024-08-23"
 readingTime: 5
 ---
 
-*The apartment deposit* ({glossary:kauce}) is a crucial part of renting in Czechia. It serves as a financial safeguard for landlords against potential damages or unpaid rent. Typically, the deposit amounts to one to three months' rent, and the maximum is legally limited to three months' rent. Landlords must inform tenants about how the deposit will be stored and under what conditions it will be returned. The deposit should be kept in a separate account, not mixed with the landlord's personal funds. Upon moving out, landlords are required to return the deposit within 30 days, provided all conditions are met. Deductions can only be made for damages beyond normal wear and tear or for outstanding rent and utility bills. Landlords must provide an itemized list of deductions if the full amount is not returned.
+*Застава за квартиру* ({glossary:kauce}) є важливою частиною оренди в Чехії. Вона слугує фінансовою гарантією для орендодавців від потенційних збитків або несплаченої орендної плати. Зазвичай застава становить від одного до трьох місячних орендних плат, а максимальна сума законодавчо обмежена трьома місячними орендними платами. Орендодавці повинні повідомити орендарів про те, як буде зберігатися застава та за яких умов вона буде повернута. Застава повинна зберігатися на окремому рахунку, а не змішуватися з особистими коштами орендодавця. Після виїзду орендодавці зобов'язані повернути заставу протягом 30 днів, за умови, що всі умови виконані. Відрахування можуть бути зроблені лише за збитки, що перевищують звичайний знос, або за несплачену орендну плату та комунальні послуги. Орендодавці повинні надати детальний перелік відрахувань, якщо повна сума не повертається.

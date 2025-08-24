@@ -1,8 +1,8 @@
 ---
-title: "How to register your address"
-excerpt: "The official process for registering your address (Anmeldung) in Prague."
+title: "Як зареєструвати свою адресу"
+excerpt: "Офіційний процес реєстрації вашої адреси (Anmeldung) у Празі."
 updatedAt: "2024-08-23"
 readingTime: 5
 ---
 
-Content coming soon...
+Контент незабаром...

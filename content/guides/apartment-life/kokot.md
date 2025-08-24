@@ -1,6 +1,6 @@
 ---
-title: "How to kokot your address"
-excerpt: "The kokot process for registering your address (Anmeldung) in Prague."
+title: "How to register your address"
+excerpt: "The official process for registering your address (Anmeldung) in Prague."
 updatedAt: "2024-08-23"
 readingTime: 5
 ---

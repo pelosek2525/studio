@@ -1,43 +1,43 @@
 ---
-title: "Types of insurance"
-excerpt: "An overview of the different types of insurance available in Czechia."
+title: "Види страхування"
+excerpt: "Огляд різних видів страхування, доступних у Чехії."
 updatedAt: "2024-08-23"
 readingTime: 5
 ---
 
-Navigating the insurance landscape in a new country can be complex. In the Czech Republic, several types of insurance are either mandatory or highly recommended to ensure you are financially protected against unforeseen events. Here's an overview of the most common types of insurance you'll encounter.
+Орієнтуватися у сфері страхування в новій країні може бути складно. У Чеській Республіці кілька видів страхування є або обов'язковими, або настійно рекомендованими, щоб забезпечити ваш фінансовий захист від непередбачених подій. Ось огляд найпоширеніших видів страхування, з якими ви зіткнетеся.
 
-### 1. Health Insurance (Zdravotní pojištění)
+### 1. Медичне страхування (Zdravotní pojištění)
 
-This is the most important type of insurance and is mandatory for all residents.
+Це найважливіший вид страхування, який є обов'язковим для всіх жителів.
 
-*   **Public Health Insurance (Veřejné zdravotní pojištění):** If you are an employee of a Czech company, a permanent resident, or an EU citizen, you will typically be enrolled in the public health system. Contributions are deducted from your salary automatically.
-*   **Private Health Insurance (Komerční zdravotní pojištění):** Non-EU citizens without permanent residence, such as those on a freelance visa or students, must arrange private health insurance. There are different levels of coverage, from basic emergency care to comprehensive plans.
+*   **Державне медичне страхування (Veřejné zdravotní pojištění):** Якщо ви є працівником чеської компанії, маєте постійне місце проживання або є громадянином ЄС, ви, як правило, будете зареєстровані в державній системі охорони здоров'я. Внески автоматично утримуються з вашої зарплати.
+*   **Приватне медичне страхування (Komerční zdravotní pojištění):** Громадяни країн, що не входять до ЄС, без постійного місця проживання, наприклад, ті, хто має візу для фрілансерів або студенти, повинні оформити приватне медичне страхування. Існують різні рівні покриття, від базової невідкладної допомоги до комплексних планів.
 
-For more details, see our guide on [how to choose health insurance](/guides/insurance/how-to-choose-health-insurance).
+Для отримання додаткової інформації дивіться наш посібник про [як вибрати медичне страхування](/guides/insurance/how-to-choose-health-insurance).
 
-### 2. Car Insurance (Autopojištění)
+### 2. Автострахування (Autopojištění)
 
-If you own a car in the Czech Republic, you are legally required to have third-party liability insurance.
+Якщо ви володієте автомобілем у Чеській Республіці, ви юридично зобов'язані мати страхування цивільної відповідальності.
 
-*   **Third-Party Liability (Povinné ručení):** This is the mandatory insurance that covers damages you may cause to other people's vehicles or property. Driving without it is illegal and can result in heavy fines.
-*   **Collision Insurance (Havarijní pojištění):** This is an optional insurance that covers damages to your own vehicle, for example, from an accident, theft, vandalism, or natural disasters. It is highly recommended, especially for newer or more valuable cars.
+*   **Страхування цивільної відповідальності (Povinné ručení):** Це обов'язкове страхування, яке покриває збитки, які ви можете завдати транспортним засобам або майну інших людей. Водіння без нього є незаконним і може призвести до значних штрафів.
+*   **Страхування від зіткнень (Havarijní pojištění):** Це необов'язкове страхування, яке покриває пошкодження вашого власного автомобіля, наприклад, внаслідок аварії, крадіжки, вандалізму або стихійних лих. Воно настійно рекомендується, особливо для нових або дорожчих автомобілів.
 
-Learn more in our guide on [how to choose car insurance](/guides/insurance/how-to-choose-car-insurance).
+Дізнайтеся більше в нашому посібнику про [як вибрати автострахування](/guides/insurance/how-to-choose-car-insurance).
 
-### 3. Liability Insurance (Pojištění odpovědnosti)
+### 3. Страхування відповідальності (Pojištění odpovědnosti)
 
-Also known as civil liability insurance, this is one of the most useful and affordable types of insurance you can get. It covers accidental damages you cause to other people's property or health in your daily life. For example, if you accidentally break a friend's laptop, spill wine on someone's expensive carpet, or cause an injury while cycling, this insurance will cover the costs.
+Також відоме як страхування цивільної відповідальності, це один з найкорисніших і найдоступніших видів страхування, які ви можете отримати. Воно покриває випадкові збитки, завдані вами майну або здоров'ю інших людей у вашому повсякденному житті. Наприклад, якщо ви випадково розбили ноутбук друга, пролили вино на дорогий килим або спричинили травму під час їзди на велосипеді, це страхування покриє витрати.
 
-Given its low cost and broad protection, it is highly recommended for everyone.
+Враховуючи його низьку вартість та широкий захист, воно настійно рекомендується для всіх.
 
-### 4. Household and Property Insurance (Pojištění domácnosti a nemovitosti)
+### 4. Страхування домашнього майна та нерухомості (Pojištění domácnosti a nemovitosti)
 
-These two are often confused but cover different things.
+Ці два види часто плутають, але вони покривають різні речі.
 
-*   **Household Insurance (Pojištění domácnosti):** This covers your personal belongings inside your apartment or house, such as furniture, electronics, and clothes, against risks like theft, fire, or water damage. If you are a tenant, this is the insurance you would get to protect your own possessions.
-*   **Property Insurance (Pojištění nemovitosti):** This covers the physical structure of the building itself (walls, roof, windows). This is typically the responsibility of the property owner or landlord.
+*   **Страхування домашнього майна (Pojištění domácnosti):** Це страхування покриває ваші особисті речі всередині квартири або будинку, такі як меблі, електроніка та одяг, від ризиків, як-от крадіжка, пожежа або пошкодження водою. Якщо ви орендар, це страхування, яке ви б оформили для захисту свого власного майна.
+*   **Страхування нерухомості (Pojištění nemovitosti):** Це страхування покриває саму фізичну конструкцію будівлі (стіни, дах, вікна). Зазвичай за це відповідає власник нерухомості або орендодавець.
 
-### 5. Legal Insurance (Pojištění právní ochrany)
+### 5. Юридичне страхування (Pojištění právní ochrany)
 
-This type of insurance covers the costs of legal disputes, including lawyers' fees and court costs. It can be useful for issues with landlords, employers, or other contractual disagreements. For more information, check out our guide: [Do you need legal insurance?](/guides/insurance/do-you-need-legal-insurance).
+Цей вид страхування покриває витрати на юридичні спори, включаючи гонорари адвокатів та судові витрати. Воно може бути корисним у питаннях з орендодавцями, роботодавцями або іншими договірними розбіжностями. Для отримання додаткової інформації дивіться наш посібник: [Чи потрібне вам юридичне страхування?](/guides/insurance/do-you-need-legal-insurance).

@@ -1,24 +1,24 @@
 ---
-title: "Two kinds of Albert"
-excerpt: "The difference between the two types of Albert supermarkets."
+title: "Два види магазинів Albert"
+excerpt: "Різниця між двома типами супермаркетів Albert."
 updatedAt: "2024-08-23"
 readingTime: 5
 ---
 
-If you've spent any time in the Czech Republic, you've likely come across the Albert grocery store chain. But you might have noticed that they come in two distinct flavors: the smaller blue "Albert Supermarket" and the larger orange "Albert Hypermarket". While they share a name, they serve different shopping needs.
+Якщо ви провели хоч якийсь час у Чеській Республіці, ви, ймовірно, стикалися з мережею продуктових магазинів Albert. Але ви могли помітити, що вони бувають двох різних видів: менший синій "Albert Supermarket" і більший помаранчевий "Albert Hypermarket". Хоча вони мають одну назву, вони задовольняють різні потреби покупців.
 
-### Albert Supermarket (The blue one)
+### Albert Supermarket (синій)
 
-Think of this as your standard neighborhood grocery store. 
+Вважайте це вашим стандартним сусідським продуктовим магазином.
 
-*   **Size & Location:** These are smaller stores, typically found in city centers, residential areas, and metro stations. Their convenient locations make them ideal for quick, daily shopping trips.
-*   **Product Range:** They offer a focused selection of everyday groceries—fresh produce, baked goods, dairy, meat, and pantry staples. The variety is sufficient for day-to-day needs, but you won't find a massive selection of specialized or non-food items.
+*   **Розмір та розташування:** Це менші магазини, які зазвичай знаходяться в центрах міст, житлових районах та на станціях метро. Їх зручне розташування робить їх ідеальними для швидких, щоденних покупок.
+*   **Асортимент товарів:** Вони пропонують обмежений вибір повсякденних продуктів — свіжі овочі та фрукти, випічку, молочні продукти, м'ясо та основні товари для комори. Асортименту достатньо для щоденних потреб, але ви не знайдете тут величезного вибору спеціалізованих або непродовольчих товарів.
 
-### Albert Hypermarket (The orange one)
+### Albert Hypermarket (помаранчевий)
 
-This is the "big box" version of Albert, designed for larger, weekly or monthly shopping hauls.
+Це "велика коробка" версія Albert, призначена для більших, тижневих або місячних закупівель.
 
-*   **Size & Location:** Hypermarkets are significantly larger, often located in shopping malls or as standalone big-box stores on the outskirts of cities. You'll usually need a car or public transport to get to one.
-*   **Product Range:** The selection is vast. In addition to a full-sized supermarket's worth of groceries (often with more brands and options), they also carry a wide array of non-food items. This includes electronics, clothing, toys, home goods, gardening supplies, and more. They are designed to be a one-stop-shop for almost all household needs.
+*   **Розмір та розташування:** Гіпермаркети значно більші, часто розташовані в торгових центрах або як окремі великі магазини на околицях міст. Зазвичай вам знадобиться автомобіль або громадський транспорт, щоб дістатися до них.
+*   **Асортимент товарів:** Вибір величезний. Окрім повного асортименту продуктів, як у повнорозмірному супермаркеті (часто з більшою кількістю брендів та опцій), вони також пропонують широкий спектр непродовольчих товарів. Це включає електроніку, одяг, іграшки, товари для дому, садові приналежності та багато іншого. Вони створені для того, щоб бути універсальним магазином для майже всіх побутових потреб.
 
-**In short:** Head to an **Albert Supermarket** for your daily bread and milk, and plan a trip to an **Albert Hypermarket** when you need to stock up on everything from groceries to a new pair of socks and a toaster.
+**Коротко кажучи:** вирушайте до **Albert Supermarket** за щоденним хлібом та молоком, і плануйте поїздку до **Albert Hypermarket**, коли вам потрібно поповнити запаси всього, від продуктів до нової пари шкарпеток та тостера.

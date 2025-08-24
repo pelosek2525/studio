@@ -1,33 +1,33 @@
 ---
-title: "Residence Registration Step-by-Step"
-excerpt: "How, where, and what to bring with you. Including fees and deadlines."
+title: "Покрокова реєстрація місця проживання"
+excerpt: "Як, де і що брати з собою. Включаючи збори та терміни."
 updatedAt: "2024-08-23"
 readingTime: 8
 ---
 
-### TL;DR
+### Коротко
 
-*   Book an appointment online at the foreign police or municipal office.
-*   Bring your passport, proof of accommodation, and fee stamps ({glossary:kolky}).
-*   Pay the {currency:200:CZK} fee and receive your confirmation.
-*   Report any changes within 3 working days.
+*   Запишіться на прийом онлайн в поліцію у справах іноземців або муніципальний офіс.
+*   Візьміть з собою паспорт, підтвердження про проживання та гербові марки ({glossary:kolky}).
+*   Сплатіть збір {currency:200:CZK} та отримайте підтвердження.
+*   Повідомляйте про будь-які зміни протягом 3 робочих днів.
 
-### Steps to Follow
+### Покрокові дії
 
-1.  **Book Your Appointment**: Use the official online portal to book a time slot. Appointments fill up fast, so book several weeks in advance. You will receive a confirmation email with your appointment details.
-2.  **Prepare Your Documents**: Gather all required documents: your passport, the original signed proof of accommodation (lease agreement or confirmation from the property owner), and a completed application form. Ensure your passport is valid for your intended stay.
-3.  **Visit the Office**: Arrive at the designated office at least 15 minutes before your appointment. You will submit your documents, pay the administrative fee, and answer any questions. The official will then issue a confirmation of your registration.
+1.  **Запишіться на прийом**: Використовуйте офіційний онлайн-портал, щоб забронювати час. Місця швидко закінчуються, тому бронюйте за кілька тижнів наперед. Ви отримаєте електронний лист з підтвердженням деталей вашого прийому.
+2.  **Підготуйте документи**: Зберіть усі необхідні документи: ваш паспорт, оригінал підписаного підтвердження про проживання (договір оренди або підтвердження від власника нерухомості) та заповнену анкету. Переконайтеся, що ваш паспорт дійсний на весь період вашого передбачуваного перебування.
+3.  **Відвідайте офіс**: Прибудьте до вказаного офісу щонайменше за 15 хвилин до вашого прийому. Ви подасте документи, сплатите адміністративний збір та відповісте на будь-які запитання. Потім посадова особа видасть підтвердження вашої реєстрації.
 
-### Frequently Asked Questions
+### Часті запитання
 
-**Does the property owner have to sign the confirmation?**
+**Чи повинен власник нерухомості підписувати підтвердження?**
 
-Yes, the proof of accommodation must be signed by the official owner of the property or an authorized representative with a power of attorney.
+Так, підтвердження про проживання повинно бути підписане офіційним власником нерухомості або уповноваженим представником з довіреністю.
 
-**What if I can't get an appointment in time?**
+**Що робити, якщо я не можу записатися на прийом вчасно?**
 
-By law, you must register within 3 working days of arrival if you're a third-country national planning to stay longer than 30 days. If you cannot get an appointment, it's advised to visit the office and explain the situation to avoid potential fines. EU citizens have 30 days.
+Згідно із законом, ви повинні зареєструватися протягом 3 робочих днів після прибуття, якщо ви є громадянином третьої країни, який планує перебувати довше 30 днів. Якщо ви не можете записатися на прийом, радимо відвідати офіс і пояснити ситуацію, щоб уникнути можливих штрафів. Громадяни ЄС мають 30 днів.
 
-**Can I pay the fee with a card?**
+**Чи можу я сплатити збір карткою?**
 
-It depends on the office. Many smaller offices only accept fee stamps ('{glossary:kolky}'), which can be purchased at any post office. It's safer to have the stamps ready beforehand.
+Це залежить від офісу. Багато менших офісів приймають лише гербові марки ('{glossary:kolky}'), які можна придбати на будь-якій пошті. Безпечніше мати марки напоготові заздалегідь.

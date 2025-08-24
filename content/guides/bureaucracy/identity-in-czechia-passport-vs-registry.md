@@ -1,24 +1,24 @@
 ---
-title: "Registry Identity vs. Passport Identity"
-excerpt: "Understand the difference between the name in your passport and the name on Czech registry documents, and why it can cause issues."
+title: "Особа в реєстрі vs. Особа в паспорті"
+excerpt: "Зрозумійте різницю між іменем у вашому паспорті та іменем у чеських реєстраційних документах, і чому це може викликати проблеми."
 updatedAt: "2024-08-25"
 readingTime: 4
 ---
 
-When you receive a Czech registry document ({glossary:matricni-doklad}), such as a marriage or birth certificate, your name may be transcribed into a Czech version. This "registry identity" can often differ from the name in your passport, especially if your name is transcribed from a non-Latin script.
+Коли ви отримуєте чеський реєстраційний документ ({glossary:matricni-doklad}), такий як свідоцтво про шлюб або народження, ваше ім'я може бути транскрибоване у чеську версію. Ця "особа в реєстрі" часто може відрізнятися від імені у вашому паспорті, особливо якщо ваше ім'я транскрибоване з нелатинського алфавіту.
 
-For example:
-*   **Name in Cyrillic:** В’ячеслав Шишка
-*   **International passport transcription:** Vyacheslav Shyshka
-*   **Czech transcription:** Vjačeslav Šyška
+Наприклад:
+*   **Ім'я кирилицею:** В’ячеслав Шишка
+*   **Транскрипція в міжнародному паспорті:** Vyacheslav Shyshka
+*   **Чеська транскрипція:** Vjačeslav Šyška
 
-By law, the registry identity takes precedence over the passport identity in the Czech national {glossary:registr-obyvatel}. This means that after your Czech registry document is processed by the {glossary:ministry-of-interior}, you will be automatically listed in the official register under the name written on that document, regardless of the name in your passport.
+За законом, особа в реєстрі має пріоритет над особою в паспорті в чеському національному {glossary:registr-obyvatel}. Це означає, що після обробки вашого чеського реєстраційного документа {glossary:ministry-of-interior}, ви будете автоматично внесені в офіційний реєстр під іменем, зазначеним у цьому документі, незалежно від імені у вашому паспорті.
 
-However, your residence permit card will always be issued in the name that appears in your passport, as it must match your travel document for border control purposes.
+Однак ваша карта посвідки на проживання завжди буде видана на ім'я, яке вказано у вашому паспорті, оскільки вона повинна збігатися з вашим проїзним документом для цілей прикордонного контролю.
 
-This creates a practical discrepancy where the name on your residence permit and passport differs from the name in the national register. When dealing with authorities (like the tax office, trade license office, or social security), it is highly recommended to inform them of this difference upfront to avoid confusion.
+Це створює практичну розбіжність, коли ім'я на вашій посвідці на проживання та в паспорті відрізняється від імені в національному реєстрі. При зверненні до органів влади (наприклад, податкової, управління з питань підприємництва або соціального забезпечення) настійно рекомендується повідомляти їм про цю різницю заздалегідь, щоб уникнути плутанини.
 
-### What should you do?
+### Що вам слід робити?
 
-*   If you have a biometric residence card or a permanent residence permit, you can request to have your registry identity added as an official note on the card.
-*   It's a good practice to carry a certified copy of your Czech registry document (e.g., marriage certificate) to prove your identity when the names don't match. You will need this to prove the connection between your passport name and your registry name. For more details, see our guide on [how to get a certified copy](/guides/bureaucracy/how-to-get-a-certified-copy).
+*   Якщо у вас є біометрична карта посвідки на проживання або дозвіл на постійне проживання, ви можете попросити додати вашу особу в реєстрі як офіційну примітку на карті.
+*   Рекомендується мати при собі завірену копію вашого чеського реєстраційного документа (наприклад, свідоцтва про шлюб) для підтвердження вашої особи, коли імена не збігаються. Вам це знадобиться, щоб довести зв'язок між вашим паспортним іменем та вашим іменем у реєстрі. Для отримання додаткової інформації дивіться наш посібник про те, [як отримати завірену копію](/guides/bureaucracy/how-to-get-a-certified-copy).
