@@ -6,3 +6,7 @@ readingTime: 5
 ---
 
 Content coming soon...
+
+SOLUS
+
+{glossary:SOLUS}
