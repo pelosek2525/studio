@@ -1,5 +1,4 @@
 
-
 import Link from 'next/link';
 import { getGuideCategories } from '@/lib/guides';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
@@ -27,7 +26,7 @@ import {
 } from 'lucide-react';
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
 const categoryIcons: Record<string, React.ReactNode> = {
   'moving-to-prague': <Plane className="h-8 w-8 text-primary" />,
@@ -52,9 +51,9 @@ const categoryIcons: Record<string, React.ReactNode> = {
 };
 
 
-export default function GuidesIndexPage() {
+export default async function GuidesIndexPage() {
   const categories = getGuideCategories();
-  const t = useTranslations('GuidesIndexPage');
+  const t = await getTranslations('GuidesIndexPage');
 
   return (
     <div className="container max-w-7xl py-12">

@@ -1,3 +1,4 @@
+
 import { getGuide, getAllGuidePaths, getGuidesForCategory } from '@/lib/guides';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
@@ -5,7 +6,7 @@ import { Calendar, Clock } from 'lucide-react';
 import { GuideContent } from '@/components/content/guide-content';
 import { Separator } from '@/components/ui/separator';
 import { GuideSidebar } from '@/components/content/guide-sidebar';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
 type Props = {
   params: {
@@ -33,7 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function GuidePage({ params }: Props) {
   const guide = await getGuide(params.category, params.slug);
-  const t = useTranslations('GuidePage');
+  const t = await getTranslations('GuidePage');
 
   if (!guide) {
     notFound();
