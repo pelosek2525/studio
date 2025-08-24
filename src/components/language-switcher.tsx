@@ -29,7 +29,8 @@ export default function LanguageSwitcher() {
 
   const handleLocaleChange = (nextLocale: string) => {
     startTransition(() => {
-      router.replace(pathname, { locale: nextLocale });
+      const newPath = pathname.startsWith(`/${locale}`) ? pathname.replace(`/${locale}`, `/${nextLocale}`) : `/${nextLocale}${pathname}`;
+      router.replace(newPath);
     });
   };
 
@@ -72,10 +73,16 @@ function CzechFlag() {
 
 function UkFlag() {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="h-5 w-5">
-            <path fill="#eee" d="M0 0h512v512H0z"/>
-            <path fill="#0057b7" d="M0 0h512v256H0z"/>
-            <path fill="#ffd700" d="M0 256h512v256H0z"/>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="20" height="15" className="h-5 w-5">
+            <clipPath id="t">
+                <path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/>
+            </clipPath>
+            <path d="M0,0 v30 h60 v-30 z" fill="#00247d"/>
+            <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" strokeWidth="6"/>
+            <path d="M0,0 L60,30 M60,0 L0,30" clipPath="url(#t)" stroke="#fff" strokeWidth="10"/>
+            <path d="M0,0 L60,30 M60,0 L0,30" stroke="#cf142b" strokeWidth="4"/>
+            <path d="M30,0 v30 M0,15 h60" stroke="#fff" strokeWidth="10"/>
+            <path d="M30,0 v30 M0,15 h60" stroke="#cf142b" strokeWidth="6"/>
         </svg>
     )
 }
@@ -89,10 +96,10 @@ function UkraineFlag() {
 }
 function RussiaFlag() {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" className="h-5 w-5">
-            <path d="M0 0h3v2H0z" fill="#fff" />
-            <path d="M0 1h3v1H0z" fill="#d52b1e" />
-            <path d="M0 .667h3v.666H0z" fill="#0039a6" />
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 6" width="21" height="14" className="h-5 w-5">
+            <rect fill="#fff" width="9" height="3"/>
+            <rect fill="#d52b1e" y="3" width="9" height="3"/>
+            <rect fill="#0039a6" y="2" width="9" height="2"/>
         </svg>
     )
 }
@@ -101,9 +108,12 @@ function KazakhstanFlag() {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256" className="h-5 w-5">
             <rect fill="#00B0C7" width="512" height="256"/>
-            <circle cx="256" cy="128" r="48" fill="#F7D600"/>
-            <path d="M256,80 l-16,32 l32,0 z M256,176 l-16,-32 l32,0 z M208,128 l32,16 l-32,16 z M304,128 l-32,16 l32,16 z" fill="#F7D600"/>
-            <path d="M32,0 V256 M44,0 V256 M56,0 V256 M68,0 V256 M80,0 V256 M92,0 V256" stroke="#F7D600" strokeWidth="4"/>
+            <g fill="#FFC91C">
+                <path d="m192 128 32-16 32 16-32 16-32-16z"/>
+                <path d="m224 80 16 32-16 16-16-16 16-32z"/>
+                <path d="m224 176 16-32-16-16-16 16 16 32z"/>
+                <path d="M118.4 0v256h19.2V0h-19.2zm-32 0v256h19.2V0H86.4zm64 0v256h19.2V0h-19.2z"/>
+            </g>
         </svg>
     )
 }
