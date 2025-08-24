@@ -1,8 +1,53 @@
+
 import Link from 'next/link';
 import { getGuideCategories } from '@/lib/guides';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { Search } from 'lucide-react';
+import {
+  Search,
+  Plane,
+  Briefcase,
+  Home,
+  Bus,
+  Car,
+  Heart,
+  Dog,
+  Users,
+  Building,
+  University,
+  Scale,
+  HandCoins,
+  ShieldCheck,
+  Map,
+  BookUser,
+  LogOut,
+  Sparkles,
+  Store,
+} from 'lucide-react';
+import React from 'react';
+
+const categoryIcons: Record<string, React.ReactNode> = {
+  'moving-to-prague': <Plane className="h-8 w-8 text-primary" />,
+  'working-in-czechia': <Briefcase className="h-8 w-8 text-primary" />,
+  'visiting-prague': <Map className="h-8 w-8 text-primary" />,
+  'apartment-life': <Home className="h-8 w-8 text-primary" />,
+  'starting-a-business': <Store className="h-8 w-8 text-primary" />,
+  'the-basics': <BookUser className="h-8 w-8 text-primary" />,
+  'personal-finance': <HandCoins className="h-8 w-8 text-primary" />,
+  healthcare: <Heart className="h-8 w-8 text-primary" />,
+  insurance: <ShieldCheck className="h-8 w-8 text-primary" />,
+  'where-to-find': <Search className="h-8 w-8 text-primary" />,
+  immigration: <Building className="h-8 w-8 text-primary" />,
+  bureaucracy: <University className="h-8 w-8 text-primary" />,
+  'legal-matters': <Scale className="h-8 w-8 text-primary" />,
+  'family-and-friends': <Users className="h-8 w-8 text-primary" />,
+  dogs: <Dog className="h-8 w-8 text-primary" />,
+  'leaving-czechia': <LogOut className="h-8 w-8 text-primary" />,
+  'getting-around': <Bus className="h-8 w-8 text-primary" />,
+  driving: <Car className="h-8 w-8 text-primary" />,
+  'bonus-content': <Sparkles className="h-8 w-8 text-primary" />,
+};
+
 
 export default function GuidesIndexPage() {
   const categories = getGuideCategories();
@@ -26,7 +71,8 @@ export default function GuidesIndexPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {categories.map((category) => (
           <Card key={category.slug} className="flex flex-col">
-            <CardHeader>
+            <CardHeader className="flex-row items-center gap-4 space-y-0">
+              {categoryIcons[category.slug] || <Plane className="h-8 w-8 text-primary" />}
               <CardTitle className="font-headline text-2xl">{category.name}</CardTitle>
             </CardHeader>
             <CardContent className="flex-grow">
