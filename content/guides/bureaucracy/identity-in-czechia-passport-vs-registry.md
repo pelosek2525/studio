@@ -12,7 +12,7 @@ For example:
 *   **International passport transcription:** Vyacheslav Shyshka
 *   **Czech transcription:** Vjačeslav Šyška
 
-By law, the registry identity takes precedence over the passport identity in the Czech national {glossary:registr-obyvatel}. This means that after your Czech registry document is processed by the Ministry of the Interior, you will be automatically listed in the official register under the name written on that document, regardless of the name in your passport.
+By law, the registry identity takes precedence over the passport identity in the Czech national {glossary:registr-obyvatel}. This means that after your Czech registry document is processed by the {glossary:ministry-of-interior}, you will be automatically listed in the official register under the name written on that document, regardless of the name in your passport.
 
 However, your residence permit card will always be issued in the name that appears in your passport, as it must match your travel document for border control purposes.
 
