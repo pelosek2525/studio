@@ -1,7 +1,7 @@
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Calculator, Sparkles, FileText, ListChecks } from 'lucide-react';
+import { ArrowRight, Calculator, Sparkles, FileText, ListChecks, BookText } from 'lucide-react';
 import Link from 'next/link';
 
 const tools = [
@@ -34,6 +34,14 @@ const tools = [
     description: "Interaktivní seznam úkolů pro hladký start v Praze.",
     href: "/tools/moving-checklist",
     cta: "Otevřít checklist",
+    disabled: false
+  },
+  {
+    icon: <BookText className="h-8 w-8 text-primary" />,
+    title: "Slovníček pojmů",
+    description: "Prohledávatelný slovník klíčových českých termínů a zkratek.",
+    href: "/tools/glossary",
+    cta: "Otevřít slovníček",
     disabled: false
   }
 ];
