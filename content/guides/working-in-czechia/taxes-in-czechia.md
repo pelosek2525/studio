@@ -7,4 +7,4 @@ readingTime: 5
 
 Content coming soon...
 
-{widget:net-salary-calculator}
+<widget name="net-salary-calculator"></widget>

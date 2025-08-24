@@ -32,8 +32,8 @@ const processNode = (node: Node, keyPrefix: string): React.ReactNode => {
             return <Currency key={keyPrefix} amount={amount} currency={code} />;
         }
         
-        if (tagName === 'div' && element.hasAttribute('data-widget-name')) {
-            const widgetName = element.getAttribute('data-widget-name')!;
+        if (tagName === 'widget' && element.hasAttribute('name')) {
+            const widgetName = element.getAttribute('name')!;
             const WidgetComponent = WIDGET_MAP[widgetName];
             if (WidgetComponent) {
                 return <div className="not-prose my-8"><WidgetComponent key={keyPrefix} /></div>;
@@ -77,4 +77,3 @@ export function GuideContent({ content }: { content: string }) {
     </GlossaryWrapper>
   );
 }
-
