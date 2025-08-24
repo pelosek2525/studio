@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import {
   Accordion,
   AccordionContent,
@@ -41,7 +41,7 @@ export function MovingChecklist({ checklistData }: MovingChecklistProps) {
   useEffect(() => {
     setIsClient(true);
     try {
-      const savedState = localStorage.getItem(STORAGE_KEY);
+      const savedState = window.localStorage.getItem(STORAGE_KEY);
       if (savedState) {
         setCheckedItems(JSON.parse(savedState));
       }
@@ -50,19 +50,17 @@ export function MovingChecklist({ checklistData }: MovingChecklistProps) {
     }
   }, []);
 
-  useEffect(() => {
-    if (isClient) {
-      try {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(checkedItems));
-      } catch (error) {
-        console.error("Failed to save checklist state to localStorage", error);
-      }
-    }
-  }, [checkedItems, isClient]);
-
-  const handleCheckedChange = (itemId: string, checked: boolean) => {
-    setCheckedItems(prev => ({ ...prev, [itemId]: checked }));
-  };
+  const handleCheckedChange = useCallback((itemId: string, checked: boolean) => {
+    setCheckedItems(prev => {
+        const newState = { ...prev, [itemId]: checked };
+        try {
+            window.localStorage.setItem(STORAGE_KEY, JSON.stringify(newState));
+        } catch (error) {
+            console.error("Failed to save checklist state to localStorage", error);
+        }
+        return newState;
+    });
+  }, []);
 
   const allItems = checklistData.categories.flatMap(category => category.items);
   const totalItems = allItems.length;
@@ -71,7 +69,20 @@ export function MovingChecklist({ checklistData }: MovingChecklistProps) {
 
   if (!isClient) {
     // Render a placeholder or loader on the server
-    return <div>Loading checklist...</div>;
+    return (
+        <div className="space-y-6">
+            <div className="space-y-2">
+                <div className="flex justify-between font-medium">
+                    <span>Celkový pokrok</span>
+                    <span>...</span>
+                </div>
+                <Progress value={0} />
+            </div>
+            <div className="text-center text-muted-foreground py-8">
+                Načítání checklistu...
+            </div>
+        </div>
+    );
   }
 
   return (
