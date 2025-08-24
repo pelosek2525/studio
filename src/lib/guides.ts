@@ -64,50 +64,61 @@ export function getGuidesForCategory(categorySlug: string): { meta: GuideMetadat
   });
 }
 
-function processNode(node: Node, glossary: Glossary): Node {
+function processNode(node: Node, glossary: Glossary): void {
     if (node.nodeType === 3) { // Text node
         const text = node.textContent || '';
         const parent = node.parentNode!;
         
-        // Skip processing if inside a link or button already
-        if (parent.nodeName === 'A' || parent.nodeName === 'BUTTON') {
-            return node;
+        if (parent.nodeName === 'A' || parent.nodeName === 'BUTTON' || parent.nodeName === 'SPAN') {
+            return;
         }
 
         const regex = /({glossary:([a-zA-Z0-9_-]+)})|({currency:([\d,]+):([A-Z]{3})})/g;
-        const parts = text.split(regex).filter(Boolean);
+        let lastIndex = 0;
+        const fragment = parent.ownerDocument.createDocumentFragment();
+        let match;
 
-        if (parts.length > 1) {
-            parts.forEach(part => {
-                const glossaryMatch = part.match(/{glossary:([a-zA-Z0-9_-]+)}/);
-                if (glossaryMatch) {
-                    const termId = glossaryMatch[1];
-                    const termText = glossary[termId]?.term || termId.replace(/-/g, ' ');
-                    const button = parent.ownerDocument.createElement('button');
-                    button.setAttribute('data-glossary-term', termId);
-                    button.textContent = termText;
-                    parent.insertBefore(button, node);
-                    return;
-                }
-                
-                const currencyMatch = part.match(/{currency:([\d,]+):([A-Z]{3})}/);
-                if (currencyMatch) {
-                    const [, amount, currency] = currencyMatch;
-                    const span = parent.ownerDocument.createElement('span');
-                    span.setAttribute('data-currency-amount', amount.replace(/,/g, ''));
-                    span.setAttribute('data-currency-code', currency);
-                    parent.insertBefore(span, node);
-                    return;
-                }
+        while ((match = regex.exec(text)) !== null) {
+            // Add text before the match
+            if (match.index > lastIndex) {
+                fragment.appendChild(parent.ownerDocument.createTextNode(text.substring(lastIndex, match.index)));
+            }
 
-                parent.insertBefore(parent.ownerDocument.createTextNode(part), node);
-            });
-            parent.removeChild(node);
+            // Handle glossary match
+            if (match[1]) {
+                const termId = match[2];
+                const termText = glossary[termId]?.term || termId.replace(/-/g, ' ');
+                const button = parent.ownerDocument.createElement('button');
+                button.setAttribute('data-glossary-term', termId);
+                button.textContent = termText;
+                fragment.appendChild(button);
+            } 
+            // Handle currency match
+            else if (match[3]) {
+                const amount = match[4];
+                const currencyCode = match[5];
+                const span = parent.ownerDocument.createElement('span');
+                span.setAttribute('data-currency-amount', amount.replace(/,/g, ''));
+                span.setAttribute('data-currency-code', currencyCode);
+                fragment.appendChild(span);
+            }
+            
+            lastIndex = regex.lastIndex;
         }
+
+        // If there's any text left after the last match, or if no matches were found
+        if (lastIndex < text.length) {
+            fragment.appendChild(parent.ownerDocument.createTextNode(text.substring(lastIndex)));
+        }
+
+        // Only replace if we actually made changes
+        if (fragment.childNodes.length > 1 || (fragment.childNodes.length === 1 && fragment.firstChild?.nodeType !== 3)) {
+             parent.replaceChild(fragment, node);
+        }
+
     } else if (node.nodeType === 1) { // Element node
         Array.from(node.childNodes).forEach(child => processNode(child, glossary));
     }
-    return node;
 }
 
 
