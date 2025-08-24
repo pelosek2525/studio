@@ -4,7 +4,8 @@ import { cn } from "@/lib/utils";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Toaster } from "@/components/ui/toaster"
-import { useTranslations } from 'next-intl';
+import {NextIntlClientProvider} from 'next-intl';
+import {getMessages} from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
@@ -19,15 +20,18 @@ interface LocaleLayoutProps {
   };
 }
 
-export default function LocaleLayout({
+export default async function LocaleLayout({
   children,
   params: { locale }
 }: Readonly<LocaleLayoutProps>) {
   // Validate that the incoming `locale` parameter is valid
-  const t = useTranslations('Header');
   if (!['en', 'cs'].includes(locale)) {
     notFound();
   }
+
+  // Providing all messages to the client
+  // side is the easiest way to get started
+  const messages = await getMessages();
 
   return (
     <html lang={locale} className="scroll-smooth dark">
@@ -37,10 +41,12 @@ export default function LocaleLayout({
         <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=Belleza&display=swap" rel="stylesheet" />
       </head>
       <body className={cn("min-h-screen bg-background font-body antialiased flex flex-col")}>
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <Toaster />
+        <NextIntlClientProvider messages={messages}>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <Toaster />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
