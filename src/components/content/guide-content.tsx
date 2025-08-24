@@ -14,6 +14,8 @@ const WIDGET_MAP: Record<string, React.ComponentType> = {
     'proof-of-accommodation-form': ProofOfAccommodationForm,
 };
 
+const VOID_ELEMENTS = ['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr'];
+
 const processNode = (node: Node, keyPrefix: string): React.ReactNode => {
     if (node.nodeType === 3) { // Text node
         return node.textContent;
@@ -52,6 +54,10 @@ const processNode = (node: Node, keyPrefix: string): React.ReactNode => {
             } else {
                 props[attr.name] = attr.value;
             }
+        }
+
+        if (VOID_ELEMENTS.includes(tagName)) {
+            return React.createElement(tagName, props);
         }
 
         try {
