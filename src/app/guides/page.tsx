@@ -80,7 +80,7 @@ export default function GuidesIndexPage() {
                 {category.guides.map((guide) => (
                   <li key={guide.slug} className="flex">
                     <Link href={`/guides/${category.slug}/${guide.slug}`} passHref>
-                        <span className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                        <span className="text-accent hover:text-accent/80 transition-colors duration-300">
                            - {guide.title}
                         </span>
                     </Link>
