@@ -2,5 +2,9 @@
   "kolky": {
     "term": "Kolky",
     "definition": "Fee stamps used in the Czech Republic for administrative payments. They can be purchased at any post office in various denominations. Think of them as a pre-paid receipt for official fees."
+  },
+  "SOLUS":{
+    "term": "SOLUS",
+    "definition":"register"
   }
 }
