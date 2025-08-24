@@ -64,42 +64,95 @@ export function getGuidesForCategory(categorySlug: string): { meta: GuideMetadat
   });
 }
 
-function processNode(node: Node): Node {
+function processNode(node: Node, glossary: Glossary, glossaryRegex: RegExp): Node {
     if (node.nodeType === 3) { // Text node
         const text = node.textContent || '';
         const parent = node.parentNode!;
         
-        const regex = /({glossary:[a-zA-Z0-9_-]+})|({currency:[\d,]+:[A-Z]{3}})/g;
-        const parts = text.split(regex).filter(Boolean);
+        // Skip processing if inside a link or button already
+        if (parent.nodeName === 'A' || parent.nodeName === 'BUTTON') {
+            return node;
+        }
+
+        const manualRegex = /({glossary:([a-zA-Z0-9_-]+)})|({currency:([\d,]+):([A-Z]{3})})/g;
+
+        const parts = text.split(glossaryRegex).filter(Boolean);
 
         if (parts.length > 1) {
             parts.forEach(part => {
-                const glossaryMatch = part.match(/{glossary:([a-zA-Z0-9_-]+)}/);
-                if (glossaryMatch) {
-                    const termId = glossaryMatch[1];
+                const termId = Object.keys(glossary).find(key => glossary[key].term.toLowerCase() === part.toLowerCase());
+                if (termId) {
                     const button = parent.ownerDocument.createElement('button');
                     button.setAttribute('data-glossary-term', termId);
-                    button.textContent = termId.replace(/-/g, ' ');
+                    button.textContent = part;
                     parent.insertBefore(button, node);
-                    return;
+                } else {
+                     // After splitting by glossary terms, we check for manual tags inside the non-glossary parts.
+                    const manualParts = part.split(manualRegex).filter(Boolean);
+                     if (manualParts.length > 1) {
+                        manualParts.forEach(manualPart => {
+                            const glossaryMatch = manualPart.match(/{glossary:([a-zA-Z0-9_-]+)}/);
+                            if (glossaryMatch) {
+                                const termId = glossaryMatch[1];
+                                const termText = glossary[termId]?.term || termId.replace(/-/g, ' ');
+                                const button = parent.ownerDocument.createElement('button');
+                                button.setAttribute('data-glossary-term', termId);
+                                button.textContent = termText;
+                                parent.insertBefore(button, node);
+                                return;
+                            }
+                            
+                            const currencyMatch = manualPart.match(/{currency:([\d,]+):([A-Z]{3})}/);
+                            if (currencyMatch) {
+                                const [, amount, currency] = currencyMatch;
+                                const span = parent.ownerDocument.createElement('span');
+                                span.setAttribute('data-currency-amount', amount.replace(/,/g, ''));
+                                span.setAttribute('data-currency-code', currency);
+                                parent.insertBefore(span, node);
+                                return;
+                            }
+
+                            parent.insertBefore(parent.ownerDocument.createTextNode(manualPart), node);
+                        });
+                    } else {
+                        parent.insertBefore(parent.ownerDocument.createTextNode(part), node);
+                    }
                 }
-                
-                const currencyMatch = part.match(/{currency:([\d,]+):([A-Z]{3})}/);
-                if (currencyMatch) {
-                    const [, amount, currency] = currencyMatch;
-                    const span = parent.ownerDocument.createElement('span');
-                    span.setAttribute('data-currency-amount', amount.replace(/,/g, ''));
-                    span.setAttribute('data-currency-code', currency);
-                    parent.insertBefore(span, node);
-                    return;
-                }
-    
-                parent.insertBefore(parent.ownerDocument.createTextNode(part), node);
             });
             parent.removeChild(node);
+        } else {
+             // No auto-glossary matches, check for manual tags in the original text.
+            const manualParts = text.split(manualRegex).filter(Boolean);
+            if (manualParts.length > 1) {
+                manualParts.forEach(manualPart => {
+                    const glossaryMatch = manualPart.match(/{glossary:([a-zA-Z0-9_-]+)}/);
+                    if (glossaryMatch) {
+                        const termId = glossaryMatch[1];
+                        const termText = glossary[termId]?.term || termId.replace(/-/g, ' ');
+                        const button = parent.ownerDocument.createElement('button');
+                        button.setAttribute('data-glossary-term', termId);
+                        button.textContent = termText;
+                        parent.insertBefore(button, node);
+                        return;
+                    }
+                    
+                    const currencyMatch = manualPart.match(/{currency:([\d,]+):([A-Z]{3})}/);
+                    if (currencyMatch) {
+                        const [, amount, currency] = currencyMatch;
+                        const span = parent.ownerDocument.createElement('span');
+                        span.setAttribute('data-currency-amount', amount.replace(/,/g, ''));
+                        span.setAttribute('data-currency-code', currency);
+                        parent.insertBefore(span, node);
+                        return;
+                    }
+
+                    parent.insertBefore(parent.ownerDocument.createTextNode(manualPart), node);
+                });
+                parent.removeChild(node);
+            }
         }
     } else if (node.nodeType === 1) { // Element node
-        Array.from(node.childNodes).forEach(child => processNode(child));
+        Array.from(node.childNodes).forEach(child => processNode(child, glossary, glossaryRegex));
     }
     return node;
 }
@@ -113,6 +166,7 @@ export async function getGuide(category: string, slug: string): Promise<Guide | 
 
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const matterResult = matter(fileContents);
+  const glossary = getGlossary();
 
   const processedContent = await remark()
     .use(html, { sanitize: false })
@@ -120,8 +174,13 @@ export async function getGuide(category: string, slug: string): Promise<Guide | 
   
   const dom = new JSDOM(processedContent.toString());
   const body = dom.window.document.body;
+
+  const glossaryTerms = Object.values(glossary).map(g => g.term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+  const glossaryRegex = new RegExp(`\\b(${glossaryTerms.join('|')})\\b`, 'gi');
   
-  processNode(body);
+  if (glossaryTerms.length > 0) {
+    processNode(body, glossary, glossaryRegex);
+  }
 
   return {
     meta: {
