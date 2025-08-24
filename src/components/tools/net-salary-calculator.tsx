@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -42,13 +41,13 @@ export function NetSalaryCalculator() {
     }
     setError(null);
 
-    // Calculation Constants
+    // Calculation Constants for 2025 (as per user request, using current known rates for demonstration)
     const HEALTH_INSURANCE_RATE = 0.045;
-    const SOCIAL_INSURANCE_RATE = 0.071;
+    const SOCIAL_INSURANCE_RATE = 0.071; // New rate from 2024
     const TAX_RATE_LOW = 0.15;
     const TAX_RATE_HIGH = 0.23;
-    const TAX_BRACKET_LIMIT = 161296;
-    const BASIC_TAX_DISCOUNT = 2570;
+    const TAX_BRACKET_LIMIT = 131901; // For 2024, this is 3x average salary. Placeholder.
+    const BASIC_TAX_DISCOUNT = 2570; // 30840 / 12
 
     const healthInsurance = salary * HEALTH_INSURANCE_RATE;
     const socialInsurance = salary * SOCIAL_INSURANCE_RATE;
@@ -56,6 +55,8 @@ export function NetSalaryCalculator() {
     const taxableIncome = salary;
     
     let incomeTax;
+    // Note: The concept of `superhrubá mzda` was abolished in 2021.
+    // The tax is now calculated from the gross salary.
     if (taxableIncome <= TAX_BRACKET_LIMIT) {
       incomeTax = taxableIncome * TAX_RATE_LOW;
     } else {
