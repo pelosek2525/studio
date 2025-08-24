@@ -26,7 +26,8 @@ export default async function LocaleLayout({
   params: { locale }
 }: Readonly<LocaleLayoutProps>) {
   // Validate that the incoming `locale` parameter is valid
-  if (!['en', 'cs'].includes(locale)) {
+  const locales = ['en', 'cs'];
+  if (!locales.includes(locale)) {
     notFound();
   }
 
