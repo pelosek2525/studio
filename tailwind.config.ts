@@ -18,8 +18,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['Alegreya', 'serif'],
-        headline: ['Belleza', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
+        headline: ['Inter', 'sans-serif'],
         code: ['monospace'],
       },
       typography: (theme: (arg0: string) => any) => ({
@@ -43,16 +43,16 @@ export default {
             '--tw-prose-td-borders': theme('colors.border'),
 
             h1: {
-                fontFamily: theme('fontFamily.headline'),
+                fontWeight: '700',
             },
             h2: {
-                fontFamily: theme('fontFamily.headline'),
+                fontWeight: '700',
             },
             h3: {
-                fontFamily: theme('fontFamily.headline'),
+                fontWeight: '700',
             },
             h4: {
-                fontFamily: theme('fontFamily.headline'),
+                fontWeight: '700',
             },
           },
         },
