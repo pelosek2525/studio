@@ -7,9 +7,16 @@ export interface GuideMetadata {
   readingTime: number;
 }
 
+export interface TocEntry {
+  level: number;
+  text: string;
+  id: string;
+}
+
 export interface Guide {
   meta: GuideMetadata;
   content: string;
+  toc: TocEntry[];
 }
 
 export interface GuideCategory {

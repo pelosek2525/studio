@@ -5,9 +5,7 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 import { JSDOM } from 'jsdom';
-import React from 'react';
-import type { GuideCategory, Guide, Glossary, GuideMetadata } from './types';
-import { Currency } from '@/components/content/currency';
+import type { GuideCategory, Guide, Glossary, GuideMetadata, TocEntry } from './types';
 
 const guidesDirectory = path.join(process.cwd(), 'content/guides');
 const glossaryPath = path.join(process.cwd(), 'content/glossary.json');
@@ -75,38 +73,42 @@ function processNode(node: Node, glossary: Glossary): void {
 
         const regex = /({glossary:([a-zA-Z0-9_-]+)})|({currency:([\d,]+):([A-Z]{3})})/g;
         
-        const parts = text.split(regex);
-        if(parts.length === 1) return;
+        let lastIndex = 0;
+        const nodesToAdd = [];
+        let match;
 
-        const fragment = parent.ownerDocument.createDocumentFragment();
+        while ((match = regex.exec(text)) !== null) {
+            // Add text before the match
+            if (match.index > lastIndex) {
+                nodesToAdd.push(parent.ownerDocument.createTextNode(text.substring(lastIndex, match.index)));
+            }
 
-        for (let i = 0; i < parts.length; i++) {
-            const part = parts[i];
-            if (!part) continue;
-
-            // part will be one of: the full match, a capturing group, or the text between matches
-            if (part.startsWith('{glossary:') && part.endsWith('}')) {
-                const termId = parts[i+1]; // The capturing group for the termId
-                 const termText = glossary[termId]?.term || termId.replace(/-/g, ' ');
-                 const button = parent.ownerDocument.createElement('button');
-                 button.setAttribute('data-glossary-term', termId);
-                 button.textContent = termText;
-                 fragment.appendChild(button);
-                 i+=2; // Skip the captured groups
-            } else if (part.startsWith('{currency:') && part.endsWith('}')) {
-                const amount = parts[i+3];
-                const currencyCode = parts[i+4];
+            if (match[1] && match[2]) { // glossary term
+                const termId = match[2];
+                const termText = glossary[termId]?.term || termId.replace(/-/g, ' ');
+                const button = parent.ownerDocument.createElement('button');
+                button.setAttribute('data-glossary-term', termId);
+                button.textContent = termText;
+                nodesToAdd.push(button);
+            } else if (match[3] && match[4] && match[5]) { // currency
+                const amount = match[4];
+                const currencyCode = match[5];
                 const span = parent.ownerDocument.createElement('span');
                 span.setAttribute('data-currency-amount', amount.replace(/,/g, ''));
                 span.setAttribute('data-currency-code', currencyCode);
-                fragment.appendChild(span);
-                i+=4; // Skip the captured groups
-            } else {
-                 fragment.appendChild(parent.ownerDocument.createTextNode(part));
+                nodesToAdd.push(span);
             }
+            lastIndex = regex.lastIndex;
         }
-        
-        if (fragment.childNodes.length > 0) {
+
+        // Add any remaining text
+        if (lastIndex < text.length) {
+            nodesToAdd.push(parent.ownerDocument.createTextNode(text.substring(lastIndex)));
+        }
+
+        if (nodesToAdd.length > 0) {
+            const fragment = parent.ownerDocument.createDocumentFragment();
+            nodesToAdd.forEach(n => fragment.appendChild(n));
             parent.replaceChild(fragment, node);
         }
 
@@ -135,6 +137,20 @@ export async function getGuide(category: string, slug: string): Promise<Guide | 
 
   processNode(body, glossary);
 
+  // Extract ToC and add IDs to headings
+  const toc: TocEntry[] = [];
+  const headings = body.querySelectorAll('h2, h3');
+  headings.forEach((heading) => {
+    const text = heading.textContent || '';
+    const id = text.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '');
+    heading.id = id;
+    toc.push({
+      level: parseInt(heading.tagName.substring(1), 10),
+      text,
+      id,
+    });
+  });
+
   return {
     meta: {
       title: matterResult.data.title,
@@ -145,6 +161,7 @@ export async function getGuide(category: string, slug: string): Promise<Guide | 
       readingTime: matterResult.data.readingTime,
     },
     content: body.innerHTML,
+    toc,
   };
 }
 
