@@ -5,4 +5,4 @@ updatedAt: "2024-08-23"
 readingTime: 5
 ---
 
-{glossary:SOLUS}
+Content coming soon...
