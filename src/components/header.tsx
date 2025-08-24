@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Compass, Search } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import LanguageSwitcher from './language-switcher';
 
 export default function Header() {
   const t = useTranslations('Header');
@@ -43,6 +44,7 @@ export default function Header() {
             <Search className="h-5 w-5" />
             <span className="sr-only">Search</span>
           </Button>
+          <LanguageSwitcher />
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="md:hidden">
