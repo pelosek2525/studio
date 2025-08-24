@@ -1,7 +1,7 @@
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Calculator, Sparkles } from 'lucide-react';
+import { ArrowRight, Calculator, Sparkles, FileText } from 'lucide-react';
 import Link from 'next/link';
 
 const tools = [
@@ -18,6 +18,14 @@ const tools = [
     description: "Spočítejte si svou čistou mzdu v České republice.",
     href: "/tools/net-salary-calculator",
     cta: "Otevřít kalkulačku",
+    disabled: false
+  },
+  {
+    icon: <FileText className="h-8 w-8 text-primary" />,
+    title: "Potvrzení o zajištění ubytování",
+    description: "Vyplňte a vytiskněte si doklad o zajištění ubytování.",
+    href: "/tools/proof-of-accommodation",
+    cta: "Vyplnit doklad",
     disabled: false
   }
 ];
