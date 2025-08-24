@@ -1,4 +1,5 @@
 
+
 import Link from 'next/link';
 import { getGuideCategories } from '@/lib/guides';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
@@ -25,6 +26,7 @@ import {
   Store,
 } from 'lucide-react';
 import React from 'react';
+import { Button } from '@/components/ui/button';
 
 const categoryIcons: Record<string, React.ReactNode> = {
   'moving-to-prague': <Plane className="h-8 w-8 text-primary" />,
@@ -67,10 +69,19 @@ export default function GuidesIndexPage() {
                 <Input placeholder="Search this website" className="pl-10" />
             </div>
         </div>
+        <div className="flex flex-wrap justify-center gap-2 pt-4">
+            {categories.map((category) => (
+                <Link key={category.slug} href={`#${category.slug}`} passHref>
+                    <Button variant="outline" size="sm" className="h-8">
+                        {category.name}
+                    </Button>
+                </Link>
+            ))}
+        </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {categories.map((category) => (
-          <Card key={category.slug} className="flex flex-col">
+          <Card key={category.slug} id={category.slug} className="flex flex-col scroll-mt-24">
             <CardHeader className="flex-row items-center gap-4 space-y-0">
               {categoryIcons[category.slug] || <Plane className="h-8 w-8 text-primary" />}
               <CardTitle className="font-headline text-2xl">{category.name}</CardTitle>
