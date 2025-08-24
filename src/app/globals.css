@@ -4,48 +4,48 @@
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
+    --background: 207 26% 95%; /* light desaturated blue (#EBF0F4) */
     --foreground: 210 20% 3%;
-    --card: 210 20% 98%;
+    --card: 207 26% 95%;
     --card-foreground: 210 20% 3%;
-    --popover: 210 20% 98%;
+    --popover: 207 26% 95%;
     --popover-foreground: 210 20% 3%;
-    --primary: 204 94% 23%;
+    --primary: 206 100% 16%; /* Deep Prussian blue (#003153) */
     --primary-foreground: 210 20% 98%;
     --secondary: 210 20% 91%;
     --secondary-foreground: 210 20% 9%;
     --muted: 210 20% 91%;
     --muted-foreground: 210 20% 35%;
-    --accent: 12 85% 65%;
+    --accent: 16 100% 66%; /* Vibrant coral (#FF7F50) */
     --accent-foreground: 210 20% 3%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 20% 98%;
     --border: 210 20% 89%;
     --input: 210 20% 89%;
-    --ring: 204 94% 23%;
+    --ring: 206 100% 16%;
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 212 35% 12%;
+    --background: 207 26% 9%; /* Darker desaturated blue */
     --foreground: 210 20% 94%;
-    --card: 212 35% 16%;
+    --card: 207 26% 12%;
     --card-foreground: 210 20% 94%;
-    --popover: 212 35% 12%;
+    --popover: 207 26% 9%;
     --popover-foreground: 210 20% 94%;
-    --primary: 204 90% 55%;
+    --primary: 206 90% 55%; /* Brighter Prussian blue for dark mode */
     --primary-foreground: 210 20% 5%;
-    --secondary: 212 35% 20%;
+    --secondary: 207 26% 15%;
     --secondary-foreground: 210 20% 94%;
-    --muted: 212 35% 20%;
+    --muted: 207 26% 15%;
     --muted-foreground: 210 20% 65%;
-    --accent: 12 75% 55%;
+    --accent: 16 90% 60%; /* Slightly adjusted coral for dark mode */
     --accent-foreground: 210 20% 98%;
     --destructive: 0 63% 55%;
     --destructive-foreground: 210 20% 98%;
-    --border: 212 35% 20%;
-    --input: 212 35% 20%;
-    --ring: 204 90% 55%;
+    --border: 207 26% 15%;
+    --input: 207 26% 15%;
+    --ring: 206 90% 55%;
   }
 }
 
