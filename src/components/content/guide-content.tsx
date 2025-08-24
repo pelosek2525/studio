@@ -40,6 +40,11 @@ const processNode = (node: Node, keyPrefix: string): React.ReactNode => {
             const widgetName = element.getAttribute('name')!;
             const WidgetComponent = WIDGET_MAP[widgetName];
             if (WidgetComponent) {
+                // If the widget is the only thing inside a paragraph, render it directly.
+                // Otherwise, wrap it in a div. This prevents <p><div>...</div></p> which is invalid.
+                 if (element.parentElement?.tagName.toLowerCase() === 'p' && element.parentElement?.childNodes.length === 1) {
+                    return <WidgetComponent key={keyPrefix}/>;
+                }
                 return <div key={keyPrefix} className="not-prose my-8"><WidgetComponent /></div>;
             }
         }
@@ -61,6 +66,10 @@ const processNode = (node: Node, keyPrefix: string): React.ReactNode => {
         }
 
         try {
+             // If a paragraph only contains a widget, don't render the <p> tag.
+            if (tagName === 'p' && element.childNodes.length === 1 && (element.firstChild as Element)?.tagName?.toLowerCase() === 'widget') {
+                return <>{children}</>;
+            }
             return React.createElement(tagName, props, children);
         } catch(e) {
             // Fallback for tags that cannot be rendered.
