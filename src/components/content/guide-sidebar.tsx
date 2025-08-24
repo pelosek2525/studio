@@ -6,6 +6,7 @@ import type { TocEntry, GuideMetadata } from '@/lib/types';
 import { cn } from '@/lib/utils';
 import { useHeadsObserver } from '@/hooks/use-heads-observer';
 import { ArrowRight } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 interface GuideSidebarProps {
   toc: TocEntry[];
@@ -14,13 +15,14 @@ interface GuideSidebarProps {
 
 export function GuideSidebar({ toc, relatedGuides }: GuideSidebarProps) {
   const {activeId} = useHeadsObserver();
+  const t = useTranslations('GuidePage');
   
   return (
     <aside className="hidden lg:block">
       <div className="sticky top-20 space-y-8">
         {toc.length > 0 && (
           <div>
-            <h3 className="font-headline text-lg font-semibold text-primary mb-4">On this page</h3>
+            <h3 className="font-headline text-lg font-semibold text-primary mb-4">{t('onThisPage')}</h3>
             <ul className="space-y-2">
               {toc.map((entry) => (
                 <li key={entry.id}>
@@ -41,7 +43,7 @@ export function GuideSidebar({ toc, relatedGuides }: GuideSidebarProps) {
         )}
         {relatedGuides.length > 0 && (
             <div>
-                 <h3 className="font-headline text-lg font-semibold text-primary mb-4">Related guides</h3>
+                 <h3 className="font-headline text-lg font-semibold text-primary mb-4">{t('relatedGuides')}</h3>
                  <ul className="space-y-3">
                     {relatedGuides.map((guide) => (
                         <li key={guide.slug}>

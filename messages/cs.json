@@ -1,0 +1,43 @@
+{
+  "Header": {
+    "guides": "Průvodci",
+    "tools": "Nástroje",
+    "contact": "Kontakt",
+    "title": "Průvodce městem"
+  },
+  "Footer": {
+    "contact": "Kontakt",
+    "donate": "Přispět",
+    "privacy": "Soukromí",
+    "terms": "Obchodní podmínky"
+  },
+  "HomePage": {
+    "welcome": "Vítejte v Praze",
+    "subtitle": "Tohle je začátek velkého dobrodružství! Připravíme vás na něj.",
+    "primaryAction1": "Přestěhovat se do Prahy",
+    "primaryAction2": "Najít práci",
+    "primaryAction3": "Založit firmu",
+    "secondaryTitle": "Co potřebujete?",
+    "secondaryAction1": "Byt",
+    "secondaryAction2": "Povolení k pobytu",
+    "secondaryAction3": "Bankovní účet",
+    "secondaryAction4": "Zdravotní pojištění",
+    "secondaryAction5": "Pojištění odpovědnosti",
+    "secondaryAction6": "DIČ",
+    "secondaryAction7": "Jízdní kolo",
+    "secondaryAction8": "Vozidlo",
+    "secondaryAction9": "Profesionální pomoc",
+    "allGuidesButton": "Zobrazit všechny průvodce"
+  },
+  "GuidesIndexPage": {
+    "title": "Průvodci Prahou",
+    "description": "Váš komplexní zdroj pro orientaci v životě ve městě.",
+    "searchPlaceholder": "Hledat na tomto webu"
+  },
+  "GuidePage": {
+    "onThisPage": "Na této stránce",
+    "relatedGuides": "Související průvodci",
+    "lastUpdated": "Poslední aktualizace",
+    "readingTime": "minut čtení"
+  }
+}

@@ -2,14 +2,17 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Compass, Search } from 'lucide-react';
-
-const navLinks = [
-  { href: '/guides', label: 'Guides' },
-  { href: '/tools', label: 'Tools' },
-  { href: '/contact', label: 'Contact' },
-];
+import { useTranslations } from 'next-intl';
 
 export default function Header() {
+  const t = useTranslations('Header');
+
+  const navLinks = [
+    { href: '/guides', label: t('guides') },
+    { href: '/tools', label: t('tools') },
+    { href: '/contact', label: t('contact') },
+  ];
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 max-w-screen-2xl items-center">
@@ -17,7 +20,7 @@ export default function Header() {
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Compass className="h-6 w-6 text-primary" />
             <span className="font-bold font-headline text-lg sm:inline-block">
-              City Guide
+              {t('title')}
             </span>
           </Link>
           <nav className="hidden gap-6 text-sm md:flex">
@@ -49,7 +52,7 @@ export default function Header() {
                 <Link href="/" className="mb-4 flex items-center space-x-2">
                   <Compass className="h-6 w-6 text-primary" />
                   <span className="font-bold font-headline text-lg">
-                    City Guide
+                    {t('title')}
                   </span>
                 </Link>
                 {navLinks.map((link) => (

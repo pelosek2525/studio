@@ -1,0 +1,43 @@
+{
+  "Header": {
+    "guides": "Guides",
+    "tools": "Tools",
+    "contact": "Contact",
+    "title": "City Guide"
+  },
+  "Footer": {
+    "contact": "Contact",
+    "donate": "Donate",
+    "privacy": "Privacy",
+    "terms": "Terms and conditions"
+  },
+  "HomePage": {
+    "welcome": "Welcome to Prague",
+    "subtitle": "This is the start of a great adventure! Let's get you ready for it.",
+    "primaryAction1": "Move to Prague",
+    "primaryAction2": "Find a job",
+    "primaryAction3": "Start a business",
+    "secondaryTitle": "What do you need?",
+    "secondaryAction1": "An apartment",
+    "secondaryAction2": "A residence permit",
+    "secondaryAction3": "A bank account",
+    "secondaryAction4": "Health insurance",
+    "secondaryAction5": "Liability insurance",
+    "secondaryAction6": "A tax ID",
+    "secondaryAction7": "A bicycle",
+    "secondaryAction8": "A vehicle",
+    "secondaryAction9": "Professional help",
+    "allGuidesButton": "See all guides"
+  },
+  "GuidesIndexPage": {
+    "title": "Guides about Prague",
+    "description": "Your comprehensive resource for navigating life in the city.",
+    "searchPlaceholder": "Search this website"
+  },
+  "GuidePage": {
+    "onThisPage": "On this page",
+    "relatedGuides": "Related guides",
+    "lastUpdated": "Last updated on",
+    "readingTime": "min read"
+  }
+}
