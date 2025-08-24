@@ -19,5 +19,9 @@
   "matricni-doklad": {
     "term": "Matriční doklad",
     "definition": "A Czech civil status or registry document, such as a birth certificate or marriage certificate. These documents are the primary source for your official identity within the Czech system."
+  },
+  "ministry-of-interior": {
+    "term": "Ministry of the Interior",
+    "definition": "The Ministry of the Interior of the Czech Republic (Ministerstvo vnitra) is the central government body responsible for public administration, including matters related to foreigners' residence, identity documents, and immigration.<br/><br/><strong>Useful Links:</strong><br/><a href=\"/guides/bureaucracy/how-to-get-a-foreigner-police-appointment\" class=\"text-primary underline\">How to book an appointment</a><br/><a href=\"/guides/bureaucracy/how-the-immigration-office-works\" class=\"text-primary underline\">How the immigration office works</a>"
   }
 }

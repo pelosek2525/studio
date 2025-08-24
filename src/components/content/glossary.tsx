@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { createContext, useContext, useState } from 'react';
@@ -89,9 +90,10 @@ export function GlossaryDialog({ glossary }: GlossaryDialogProps) {
             <DialogHeader>
               <DialogTitle className="font-headline text-2xl">{entry.term}</DialogTitle>
             </DialogHeader>
-            <DialogDescription className="text-foreground/80 text-base">
-              {entry.definition}
-            </DialogDescription>
+            <DialogDescription
+              className="text-foreground/80 text-base"
+              dangerouslySetInnerHTML={{ __html: entry.definition }}
+            />
           </>
         )}
       </DialogContent>
