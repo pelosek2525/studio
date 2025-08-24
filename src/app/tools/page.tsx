@@ -1,7 +1,7 @@
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Calculator, Sparkles, FileText } from 'lucide-react';
+import { ArrowRight, Calculator, Sparkles, FileText, ListChecks } from 'lucide-react';
 import Link from 'next/link';
 
 const tools = [
@@ -26,6 +26,14 @@ const tools = [
     description: "Vyplňte a vytiskněte si doklad o zajištění ubytování.",
     href: "/tools/proof-of-accommodation",
     cta: "Vyplnit doklad",
+    disabled: false
+  },
+  {
+    icon: <ListChecks className="h-8 w-8 text-primary" />,
+    title: "Checklist pro stěhování",
+    description: "Interaktivní seznam úkolů pro hladký start v Praze.",
+    href: "/tools/moving-checklist",
+    cta: "Otevřít checklist",
     disabled: false
   }
 ];

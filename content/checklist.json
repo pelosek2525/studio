@@ -1,0 +1,89 @@
+
+{
+    "categories": [
+        {
+            "title": "Před příjezdem",
+            "items": [
+                {
+                    "id": "visa",
+                    "title": "Zajistit vízum nebo povolení k pobytu",
+                    "description": "Zjistěte, jaký typ oprávnění potřebujete a podejte žádost včas.",
+                    "link": "/guides/immigration/how-to-get-a-residence-permit"
+                },
+                {
+                    "id": "accommodation",
+                    "title": "Najít dočasné nebo trvalé bydlení",
+                    "description": "Rezervujte si hotel, Airbnb nebo si najděte dlouhodobý pronájem.",
+                    "link": "/guides/apartment-life/how-to-find-an-apartment"
+                },
+                {
+                    "id": "insurance",
+                    "title": "Sjednat cestovní/zdravotní pojištění",
+                    "description": "Ujistěte se, že máte platné pojištění pro vstup do ČR.",
+                    "link": "/guides/healthcare/health-insurance-for-a-czech-visa"
+                },
+                {
+                    "id": "documents",
+                    "title": "Připravit důležité dokumenty",
+                    "description": "Pas, rodný list, smlouvy, oddací list. Zvažte pořízení úředně ověřených kopií a překladů."
+                }
+            ]
+        },
+        {
+            "title": "První týden",
+            "items": [
+                {
+                    "id": "address_registration",
+                    "title": "Registrovat adresu na cizinecké policii",
+                    "description": "Musíte tak učinit do 3 pracovních dnů od příjezdu.",
+                    "link": "/guides/moving-to-prague/residence-registration"
+                },
+                {
+                    "id": "bank_account",
+                    "title": "Otevřít si bankovní účet",
+                    "description": "Usnadní vám to placení nájmu a přijímání výplaty.",
+                    "link": "/guides/personal-finance/how-to-choose-a-bank"
+                },
+                {
+                    "id": "transport_pass",
+                    "title": "Koupit si Lítačku",
+                    "description": "Dlouhodobá jízdenka na MHD vám ušetří peníze a čas.",
+                    "link": "/guides/getting-around/how-to-buy-a-deutschland-ticket"
+                },
+                {
+                    "id": "sim_card",
+                    "title": "Pořídit si českou SIM kartu",
+                    "description": "Místní telefonní číslo je praktické pro komunikaci a ověřování služeb."
+                }
+            ]
+        },
+        {
+            "title": "První měsíc",
+            "items": [
+                {
+                    "id": "tax_id",
+                    "title": "Zaregistrovat se na finančním úřadě (pokud podnikáte)",
+                    "description": "OSVČ potřebují získat daňové identifikační číslo (DIČ).",
+                    "link": "/guides/bureaucracy/tax-id-tax-number-and-vat-number"
+                },
+                {
+                    "id": "doctor",
+                    "title": "Najít si praktického lékaře",
+                    "description": "Je dobré mít svého lékaře pro případ nemoci.",
+                    "link": "/guides/healthcare/english-speaking-doctors"
+                },
+                {
+                    "id": "explore",
+                    "title": "Prozkoumat své okolí",
+                    "description": "Objevte místní obchody, restaurace, parky a služby ve vaší čtvrti."
+                },
+                {
+                    "id": "language",
+                    "title": "Začít se učit česky",
+                    "description": "I pár základních frází vám otevře dveře a usnadní život.",
+                    "link": "/guides/moving-to-prague/how-to-learn-czech"
+                }
+            ]
+        }
+    ]
+}

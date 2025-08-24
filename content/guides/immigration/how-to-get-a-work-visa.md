@@ -4,7 +4,7 @@ excerpt: "A guide to the Employee Card application process in Czechia."
 updatedAt: "2024-08-23"
 readingTime: 2
 ---
-
+Pro více informací se podívejte na našeho průvodce [jak najít byt](/guides/apartment-life/how-to-find-an-apartment).
 # Jak získat zaměstnaneckou kartu v České republice
 
 Zaměstnanecká karta je povolení k dlouhodobému pobytu, které umožňuje občanům třetích zemí legálně žít a pracovat v České republice déle než 3 měsíce. Pokud plánujete pracovat v ČR, tento článek vám přináší přehled základních informací a postup, jak o zaměstnaneckou kartu požádat.
