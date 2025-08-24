@@ -6,5 +6,10 @@
   "SOLUS":{
     "term": "SOLUS",
     "definition":"register"
+  }, 
+  "kauce":{
+    "term": "kauce",
+    "definition": "Záloha na nájem, kterou platí nájemník pronajímateli k zajištění případných škod na majetku nebo neuhrazeného nájemného. Obvykle se jedná o částku odpovídající jednomu až třem měsícům nájmu."
+
   }
 }

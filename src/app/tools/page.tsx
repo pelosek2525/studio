@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Calculator, Sparkles } from 'lucide-react';
@@ -13,11 +14,11 @@ const tools = [
   },
   {
     icon: <Calculator className="h-8 w-8 text-primary" />,
-    title: "Cost of Living Calculator",
-    description: "Estimate your monthly expenses in the city. (Coming Soon!)",
-    href: "#",
-    cta: "Coming Soon",
-    disabled: true
+    title: "Výpočet čisté mzdy",
+    description: "Spočítejte si svou čistou mzdu v České republice.",
+    href: "/tools/net-salary-calculator",
+    cta: "Otevřít kalkulačku",
+    disabled: false
   }
 ];
 

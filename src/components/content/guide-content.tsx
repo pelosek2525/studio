@@ -4,6 +4,12 @@ import { getGlossary } from '@/lib/guides';
 import { GlossaryWrapper, GlossaryDialog, GlossaryTerm } from '@/components/content/glossary';
 import { Currency } from '@/components/content/currency';
 import { JSDOM } from 'jsdom';
+import { NetSalaryCalculator } from '../tools/net-salary-calculator';
+
+
+const WIDGET_MAP: Record<string, React.ComponentType> = {
+    'net-salary-calculator': NetSalaryCalculator,
+};
 
 const processNode = (node: Node, keyPrefix: string): React.ReactNode => {
     if (node.nodeType === 3) { // Text node
@@ -23,6 +29,14 @@ const processNode = (node: Node, keyPrefix: string): React.ReactNode => {
             const amount = Number(element.getAttribute('data-currency-amount'));
             const code = element.getAttribute('data-currency-code')!;
             return <Currency key={keyPrefix} amount={amount} currency={code} />;
+        }
+        
+        if (tagName === 'div' && element.hasAttribute('data-widget-name')) {
+            const widgetName = element.getAttribute('data-widget-name')!;
+            const WidgetComponent = WIDGET_MAP[widgetName];
+            if (WidgetComponent) {
+                return <div className="not-prose my-8"><WidgetComponent /></div>;
+            }
         }
         
         const children = Array.from(element.childNodes).map((child, i) => processNode(child, `${keyPrefix}-${tagName}-${i}`));
