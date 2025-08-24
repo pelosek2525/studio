@@ -5,14 +5,14 @@ updatedAt: "2024-08-25"
 readingTime: 4
 ---
 
-When you receive a Czech registry document (*matriční doklad*), such as a marriage or birth certificate, your name may be transcribed into a Czech version. This "registry identity" can often differ from the name in your passport, especially if your name is transcribed from a non-Latin script.
+When you receive a Czech registry document ({glossary:matricni-doklad}), such as a marriage or birth certificate, your name may be transcribed into a Czech version. This "registry identity" can often differ from the name in your passport, especially if your name is transcribed from a non-Latin script.
 
 For example:
 *   **Name in Cyrillic:** В’ячеслав Шишка
 *   **International passport transcription:** Vyacheslav Shyshka
 *   **Czech transcription:** Vjačeslav Šyška
 
-By law, the registry identity takes precedence over the passport identity in the Czech national Register of Inhabitants. This means that after your Czech registry document is processed by the Ministry of the Interior, you will be automatically listed in the official register under the name written on that document, regardless of the name in your passport.
+By law, the registry identity takes precedence over the passport identity in the Czech national {glossary:registr-obyvatel}. This means that after your Czech registry document is processed by the Ministry of the Interior, you will be automatically listed in the official register under the name written on that document, regardless of the name in your passport.
 
 However, your residence permit card will always be issued in the name that appears in your passport, as it must match your travel document for border control purposes.
 
