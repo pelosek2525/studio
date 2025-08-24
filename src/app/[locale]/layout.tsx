@@ -1,4 +1,3 @@
-
 import type { Metadata } from 'next';
 import '../globals.css';
 import { cn } from "@/lib/utils";
@@ -6,8 +5,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Toaster } from "@/components/ui/toaster"
 import { notFound } from 'next/navigation';
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { NextIntlClientProvider, useMessages } from 'next-intl';
 
 export const metadata: Metadata = {
   title: 'CityZen Guide',
@@ -21,18 +19,14 @@ interface LocaleLayoutProps {
   };
 }
 
-export default async function LocaleLayout({
+export default function LocaleLayout({
   children,
   params: { locale }
 }: Readonly<LocaleLayoutProps>) {
-  // Validate that the incoming `locale` parameter is valid
-  const locales = ['en', 'cs'];
-  if (!locales.includes(locale)) {
-    notFound();
-  }
-
-  const messages = await getMessages();
-
+  // Providing all messages to the client
+  // side is the easiest way to get started
+  const messages = useMessages();
+ 
   return (
     <html lang={locale} className="scroll-smooth dark">
       <head>
@@ -41,7 +35,7 @@ export default async function LocaleLayout({
         <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=Belleza&display=swap" rel="stylesheet" />
       </head>
       <body className={cn("min-h-screen bg-background font-body antialiased flex flex-col")}>
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
