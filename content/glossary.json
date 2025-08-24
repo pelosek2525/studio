@@ -23,5 +23,45 @@
   "ministry-of-interior": {
     "term": "Ministry of the Interior",
     "definition": "The Ministry of the Interior of the Czech Republic (Ministerstvo vnitra) is the central government body responsible for public administration, including matters related to foreigners' residence, identity documents, and immigration.<br/><br/><strong>Useful Links:</strong><br/><a href=\"/guides/bureaucracy/how-to-get-a-foreigner-police-appointment\" class=\"text-primary underline\">How to book an appointment</a><br/><a href=\"/guides/bureaucracy/how-the-immigration-office-works\" class=\"text-primary underline\">How the immigration office works</a>"
+  },
+  "zdravotni-pojisteni": {
+    "term": "Zdravotní pojištění",
+    "definition": "Health insurance. This is mandatory for all residents in Czechia. It can be either public (veřejné) or private (komerční), depending on your residency status and employment."
+  },
+  "verejne-zdravotni-pojisteni": {
+    "term": "Veřejné zdravotní pojištění",
+    "definition": "Public health insurance. This is the state-run health insurance system that most employees, permanent residents, and EU citizens are a part of."
+  },
+  "komercni-zdravotni-pojisteni": {
+    "term": "Komerční zdravotní pojištění",
+    "definition": "Private or commercial health insurance. This is required for most non-EU citizens who are not permanent residents, such as freelancers or students."
+  },
+  "autopojisteni": {
+    "term": "Autopojištění",
+    "definition": "Car insurance. A general term for insurance related to a vehicle."
+  },
+  "povinne-ruceni": {
+    "term": "Povinné ručení",
+    "definition": "Mandatory third-party liability insurance for vehicles. It covers damages you might cause to other people's property or health. It is illegal to drive without it."
+  },
+  "havarijni-pojisteni": {
+    "term": "Havarijní pojištění",
+    "definition": "Optional collision or comprehensive car insurance. It covers damages to your own vehicle from accidents, theft, vandalism, or natural disasters."
+  },
+  "pojisteni-odpovednosti": {
+    "term": "Pojištění odpovědnosti",
+    "definition": "Civil liability insurance. This covers accidental damages you cause to others' property or health in your daily life (not related to driving). It is highly recommended and usually very affordable."
+  },
+  "pojisteni-domacnosti": {
+    "term": "Pojištění domácnosti",
+    "definition": "Household insurance. This covers your personal belongings inside your home (furniture, electronics, etc.) against risks like theft, fire, or water damage. It is typically purchased by the tenant."
+  },
+  "pojisteni-nemovitosti": {
+    "term": "Pojištění nemovitosti",
+    "definition": "Property insurance. This covers the physical structure of the building itself (walls, roof, windows). It is typically purchased by the landlord or property owner."
+  },
+  "pojisteni-pravni-ochrany": {
+    "term": "Pojištění právní ochrany",
+    "definition": "Legal insurance. This covers the costs of legal disputes, such as lawyer fees and court costs. It can be useful for issues with landlords, employers, or other contracts."
   }
 }
