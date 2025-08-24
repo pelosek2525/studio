@@ -36,7 +36,7 @@ const processNode = (node: Node, keyPrefix: string): React.ReactNode => {
             const widgetName = element.getAttribute('name')!;
             const WidgetComponent = WIDGET_MAP[widgetName];
             if (WidgetComponent) {
-                return <div className="not-prose my-8"><WidgetComponent key={keyPrefix} /></div>;
+                return <div key={keyPrefix} className="not-prose my-8"><WidgetComponent /></div>;
             }
         }
         
