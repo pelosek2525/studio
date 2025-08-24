@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { getGlossary } from '@/lib/guides';
 import { GlossaryWrapper, GlossaryDialog, GlossaryTerm } from '@/components/content/glossary';
@@ -35,7 +36,7 @@ const processNode = (node: Node, keyPrefix: string): React.ReactNode => {
             const widgetName = element.getAttribute('data-widget-name')!;
             const WidgetComponent = WIDGET_MAP[widgetName];
             if (WidgetComponent) {
-                return <div className="not-prose my-8"><WidgetComponent /></div>;
+                return <div className="not-prose my-8"><WidgetComponent key={keyPrefix} /></div>;
             }
         }
         
@@ -51,7 +52,12 @@ const processNode = (node: Node, keyPrefix: string): React.ReactNode => {
             }
         }
 
-        return React.createElement(tagName, props, children);
+        try {
+            return React.createElement(tagName, props, children);
+        } catch(e) {
+            // Fallback for tags that cannot be rendered.
+            return React.createElement('div', props, children);
+        }
     }
     
     return null;
@@ -71,3 +77,4 @@ export function GuideContent({ content }: { content: string }) {
     </GlossaryWrapper>
   );
 }
+
