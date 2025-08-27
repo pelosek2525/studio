@@ -1,3 +1,4 @@
+
 {
   "Header": {
     "guides": "Guides",
@@ -39,5 +40,45 @@
     "relatedGuides": "Related guides",
     "lastUpdated": "Last updated on",
     "readingTime": "min read"
+  },
+  "ToolsPage": {
+    "title": "Tools & Calculators",
+    "description": "Our collection of interactive tools to make your city life easier.",
+    "articleSummarizer": {
+      "title": "AI Article Summarizer",
+      "description": "Get a quick TL;DR for any article or guide. Saves you time and effort.",
+      "cta": "Use Summarizer"
+    },
+    "netSalaryCalculator": {
+      "title": "Net Salary Calculator",
+      "description": "Calculate your net salary in the Czech Republic.",
+      "cta": "Open Calculator"
+    },
+    "proofOfAccommodation": {
+      "title": "Proof of Accommodation",
+      "description": "Fill out and print a proof of accommodation document.",
+      "cta": "Fill Document"
+    },
+    "movingChecklist": {
+      "title": "Moving Checklist",
+      "description": "An interactive to-do list for a smooth start in Prague.",
+      "cta": "Open Checklist"
+    },
+    "glossary": {
+      "title": "Glossary",
+      "description": "A searchable dictionary of key Czech terms and abbreviations.",
+      "cta": "Open Glossary"
+    },
+    "schengenCalculator": {
+      "title": "Schengen Calculator",
+      "description": "Calculate your days in the Schengen area according to the 90/180 day rule.",
+      "cta": "Open Calculator"
+    }
+  },
+  "SchengenCalculator": {
+    "title": "Schengen Calculator",
+    "description": "Enter your arrival and departure dates to check your compliance with the 90/180 rule.",
+    "cardTitle": "Enter Dates",
+    "cardDescription": "Use +DDMMYYYY for arrival and -DDMMYYYY for departure. Separate entries with a space."
   }
 }

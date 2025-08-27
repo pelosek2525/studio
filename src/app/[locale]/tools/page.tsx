@@ -1,59 +1,71 @@
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Calculator, Sparkles, FileText, ListChecks, BookText } from 'lucide-react';
+import { ArrowRight, Calculator, Sparkles, FileText, ListChecks, BookText, Timer } from 'lucide-react';
 import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
 
-const tools = [
-  {
-    icon: <Sparkles className="h-8 w-8 text-primary" />,
-    title: "AI Article Summarizer",
-    description: "Get a quick TL;DR for any article or guide. Saves you time and effort.",
-    href: "/tools/article-summarizer",
-    cta: "Use Summarizer"
-  },
-  {
-    icon: <Calculator className="h-8 w-8 text-primary" />,
-    title: "Výpočet čisté mzdy",
-    description: "Spočítejte si svou čistou mzdu v České republice.",
-    href: "/tools/net-salary-calculator",
-    cta: "Otevřít kalkulačku",
-    disabled: false
-  },
-  {
-    icon: <FileText className="h-8 w-8 text-primary" />,
-    title: "Potvrzení o zajištění ubytování",
-    description: "Vyplňte a vytiskněte si doklad o zajištění ubytování.",
-    href: "/tools/proof-of-accommodation",
-    cta: "Vyplnit doklad",
-    disabled: false
-  },
-  {
-    icon: <ListChecks className="h-8 w-8 text-primary" />,
-    title: "Checklist pro stěhování",
-    description: "Interaktivní seznam úkolů pro hladký start v Praze.",
-    href: "/tools/moving-checklist",
-    cta: "Otevřít checklist",
-    disabled: false
-  },
-  {
-    icon: <BookText className="h-8 w-8 text-primary" />,
-    title: "Slovníček pojmů",
-    description: "Prohledávatelný slovník klíčových českých termínů a zkratek.",
-    href: "/tools/glossary",
-    cta: "Otevřít slovníček",
-    disabled: false
-  }
-];
 
-export default function ToolsPage() {
+export default async function ToolsPage() {
+  const t = await getTranslations('ToolsPage');
+
+  const tools = [
+    {
+      icon: <Sparkles className="h-8 w-8 text-primary" />,
+      title: t('articleSummarizer.title'),
+      description: t('articleSummarizer.description'),
+      href: "/tools/article-summarizer",
+      cta: t('articleSummarizer.cta')
+    },
+    {
+      icon: <Timer className="h-8 w-8 text-primary" />,
+      title: t('schengenCalculator.title'),
+      description: t('schengenCalculator.description'),
+      href: "/tools/schengen-calculator",
+      cta: t('schengenCalculator.cta'),
+      disabled: false
+    },
+    {
+      icon: <Calculator className="h-8 w-8 text-primary" />,
+      title: t('netSalaryCalculator.title'),
+      description: t('netSalaryCalculator.description'),
+      href: "/tools/net-salary-calculator",
+      cta: t('netSalaryCalculator.cta'),
+      disabled: false
+    },
+    {
+      icon: <FileText className="h-8 w-8 text-primary" />,
+      title: t('proofOfAccommodation.title'),
+      description: t('proofOfAccommodation.description'),
+      href: "/tools/proof-of-accommodation",
+      cta: t('proofOfAccommodation.cta'),
+      disabled: false
+    },
+    {
+      icon: <ListChecks className="h-8 w-8 text-primary" />,
+      title: t('movingChecklist.title'),
+      description: t('movingChecklist.description'),
+      href: "/tools/moving-checklist",
+      cta: t('movingChecklist.cta'),
+      disabled: false
+    },
+    {
+      icon: <BookText className="h-8 w-8 text-primary" />,
+      title: t('glossary.title'),
+      description: t('glossary.description'),
+      href: "/tools/glossary",
+      cta: t('glossary.cta'),
+      disabled: false
+    }
+  ];
   return (
     <div className="container max-w-4xl py-12">
       <div className="space-y-4 text-center mb-12">
         <h1 className="font-headline text-4xl font-bold tracking-tight text-primary md:text-5xl">
-          Tools & Calculators
+          {t('title')}
         </h1>
         <p className="mx-auto max-w-[700px] text-foreground/80 md:text-xl">
-          Our collection of interactive tools to make your city life easier.
+          {t('description')}
         </p>
       </div>
       <div className="mx-auto grid grid-cols-1 gap-6 sm:grid-cols-2">

@@ -1,3 +1,4 @@
+
 {
   "Header": {
     "guides": "Průvodci",
@@ -39,5 +40,45 @@
     "relatedGuides": "Související průvodci",
     "lastUpdated": "Poslední aktualizace",
     "readingTime": "minut čtení"
+  },
+  "ToolsPage": {
+    "title": "Nástroje a kalkulačky",
+    "description": "Naše sbírka interaktivních nástrojů, které vám usnadní život ve městě.",
+    "articleSummarizer": {
+      "title": "AI Sumarizátor článků",
+      "description": "Získejte rychlé shrnutí pro jakýkoli článek nebo průvodce. Ušetří vám čas a námahu.",
+      "cta": "Použít sumarizátor"
+    },
+    "netSalaryCalculator": {
+      "title": "Výpočet čisté mzdy",
+      "description": "Spočítejte si svou čistou mzdu v České republice.",
+      "cta": "Otevřít kalkulačku"
+    },
+    "proofOfAccommodation": {
+      "title": "Potvrzení o zajištění ubytování",
+      "description": "Vyplňte a vytiskněte si doklad o zajištění ubytování.",
+      "cta": "Vyplnit doklad"
+    },
+    "movingChecklist": {
+      "title": "Checklist pro stěhování",
+      "description": "Interaktivní seznam úkolů pro hladký start v Praze.",
+      "cta": "Otevřít checklist"
+    },
+    "glossary": {
+      "title": "Slovníček pojmů",
+      "description": "Prohledávatelný slovník klíčových českých termínů a zkratek.",
+      "cta": "Otevřít slovníček"
+    },
+    "schengenCalculator": {
+      "title": "Schengenská kalkulačka",
+      "description": "Spočítejte si své dny v Schengenském prostoru podle pravidla 90/180.",
+      "cta": "Otevřít kalkulačku"
+    }
+  },
+  "SchengenCalculator": {
+    "title": "Schengenská kalkulačka",
+    "description": "Zadejte svá data příjezdů a odjezdů a zkontrolujte, zda dodržujete pravidlo 90/180.",
+    "cardTitle": "Zadejte data",
+    "cardDescription": "Použijte +DDMMRRRR pro příjezd a -DDMMRRRR pro odjezd. Oddělte položky mezerou."
   }
 }
