@@ -221,14 +221,16 @@ export function SchengenCalculator() {
             <CardHeader>
                 <CardTitle className="flex items-center">
                     Stay Timeline Visualization
-                    <UiTooltip>
-                        <TooltipTrigger asChild>
-                            <HelpCircle className='h-4 w-4 ml-2 text-muted-foreground cursor-pointer' />
-                        </TooltipTrigger>
-                        <TooltipContent className='max-w-xs'>
-                            <p>This chart visualizes your 90/180-day rolling window. Each bar is a day of your stay. Hover over a bar to see how many days you had used in the preceding 180 days on that specific day.</p>
-                        </TooltipContent>
-                    </UiTooltip>
+                    <TooltipProvider>
+                      <UiTooltip>
+                          <TooltipTrigger asChild>
+                              <HelpCircle className='h-4 w-4 ml-2 text-muted-foreground cursor-pointer' />
+                          </TooltipTrigger>
+                          <TooltipContent className='max-w-xs'>
+                              <p>This chart visualizes your 90/180-day rolling window. Each bar is a day of your stay. Hover over a bar to see how many days you had used in the preceding 180 days on that specific day.</p>
+                          </TooltipContent>
+                      </UiTooltip>
+                    </TooltipProvider>
                 </CardTitle>
             </CardHeader>
             <CardContent>
