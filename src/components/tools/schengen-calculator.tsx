@@ -5,16 +5,18 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Cell } from 'recharts';
 import { addDays, differenceInDays, format, isValid, parse, startOfDay, subDays } from 'date-fns';
 import { Terminal, Calendar, HelpCircle } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tooltip as UiTooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { cn } from '@/lib/utils';
 
 interface Stay {
   arrival: Date;
   departure: Date;
   duration: number;
+  hasOverstay: boolean;
 }
 
 interface DayInfo {
@@ -27,6 +29,12 @@ interface DayInfo {
 
 const DATE_FORMAT_INPUT = 'ddMMyyyy';
 const DATE_FORMAT_DISPLAY = 'dd MMM yyyy';
+
+const COLORS = {
+    valid: '#22c55e',
+    overstay: '#ef4444',
+    future: '#f59e0b',
+}
 
 export function SchengenCalculator() {
   const [dateInput, setDateInput] = useState('');
@@ -74,7 +82,7 @@ export function SchengenCalculator() {
       
       dateEvents.sort((a, b) => a.date.getTime() - b.date.getTime());
 
-      const stays: Stay[] = [];
+      const stays: Omit<Stay, 'hasOverstay'>[] = [];
       let currentArrival: Date | null = null;
       let arrivalCount = 0;
       let departureCount = 0;
@@ -88,7 +96,6 @@ export function SchengenCalculator() {
         } else {
             departureCount++;
             if (currentArrival) {
-                // Departure date is inclusive, so we add 1 day to duration
                 const duration = differenceInDays(event.date, currentArrival) + 1;
                 if(duration < 1) {
                     throw new Error(`Departure date ${format(event.date, DATE_FORMAT_INPUT)} must be after arrival date ${format(currentArrival, DATE_FORMAT_INPUT)}.`);
@@ -123,7 +130,7 @@ export function SchengenCalculator() {
         
         let daysUsedInWindow = 0;
         for (const stay of stays) {
-          if (stay.arrival > day) continue; // Skip future stays
+          if (stay.arrival > day) continue;
           
           const start = stay.arrival > lookbackDate ? stay.arrival : lookbackDate;
           const end = stay.departure < day ? stay.departure : day;
@@ -149,7 +156,15 @@ export function SchengenCalculator() {
         });
       }
 
-      setResult({ stays, timeline, totalDays });
+      const finalStays = stays.map(stay => {
+        const stayOverstay = timeline.some(dayInfo => {
+            const dayDate = parse(dayInfo.date, DATE_FORMAT_DISPLAY, new Date());
+            return dayInfo.isOverstay && dayDate >= stay.arrival && dayDate <= stay.departure;
+        });
+        return { ...stay, hasOverstay: stayOverstay };
+      });
+
+      setResult({ stays: finalStays, timeline, totalDays });
 
     } catch (e: any) {
       setError(e.message);
@@ -209,8 +224,9 @@ export function SchengenCalculator() {
                 <p>Total days of stay calculated: <strong>{result.totalDays}</strong></p>
                 <ul className="mt-4 space-y-2">
                     {result.stays.map((stay, index) => (
-                        <li key={index} className="text-sm p-2 border rounded-md bg-muted/50">
+                        <li key={index} className={cn("text-sm p-2 border rounded-md bg-muted/30", stay.hasOverstay && "bg-destructive/10 border-destructive/50")}>
                             <strong>Stay {index + 1}:</strong> from {format(stay.arrival, DATE_FORMAT_DISPLAY)} to {format(stay.departure, DATE_FORMAT_DISPLAY)} ({stay.duration} days)
+                            {stay.hasOverstay && <span className="font-bold text-destructive ml-2">(Contains overstay days)</span>}
                         </li>
                     ))}
                 </ul>
@@ -235,19 +251,19 @@ export function SchengenCalculator() {
             </CardHeader>
             <CardContent>
                 <div className="flex items-center space-x-4 text-xs mb-4">
-                    <div className="flex items-center"><div className="w-3 h-3 bg-green-500 mr-1"></div><span>Valid Stay Day</span></div>
-                    <div className="flex items-center"><div className="w-3 h-3 bg-red-500 mr-1"></div><span>Overstay Day</span></div>
-                    <div className="flex items-center"><div className="w-3 h-3 bg-yellow-500 mr-1"></div><span>Future Stay Day</span></div>
+                    <div className="flex items-center"><div className="w-3 h-3 mr-1" style={{backgroundColor: COLORS.valid}}></div><span>Valid Stay Day</span></div>
+                    <div className="flex items-center"><div className="w-3 h-3 mr-1" style={{backgroundColor: COLORS.overstay}}></div><span>Overstay Day</span></div>
+                    <div className="flex items-center"><div className="w-3 h-3 mr-1" style={{backgroundColor: COLORS.future}}></div><span>Future Stay Day</span></div>
                 </div>
                 <ResponsiveContainer width="100%" height={300}>
                     <BarChart data={result.timeline.filter(d => d.isStayDay)}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="date" tick={{ fontSize: 12 }} />
-                    <YAxis label={{ value: 'Days in Window', angle: -90, position: 'insideLeft' }} />
+                    <YAxis label={{ value: 'Days in Window', angle: -90, position: 'insideLeft' }} domain={[0, 'dataMax + 10']} />
                     <Tooltip content={<CustomTooltip />} />
                     <Bar dataKey="daysUsedInWindow" name="Days used in 180-day window">
                         {result.timeline.filter(d => d.isStayDay).map((entry, index) => (
-                            <Bar key={`cell-${index}`} fill={entry.isOverstay ? '#ef4444' : entry.isFutureStay ? '#f59e0b' : '#22c55e'} />
+                            <Cell key={`cell-${index}`} fill={entry.isOverstay ? COLORS.overstay : entry.isFutureStay ? COLORS.future : COLORS.valid} />
                         ))}
                     </Bar>
                     </BarChart>
