@@ -1,7 +1,7 @@
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Calculator, Sparkles, FileText, ListChecks, BookText, Timer } from 'lucide-react';
+import { ArrowRight, Calculator, Sparkles, FileText, ListChecks, BookText, Timer, Building2 } from 'lucide-react';
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 
@@ -24,6 +24,14 @@ export default async function ToolsPage() {
       href: "/tools/schengen-calculator",
       cta: t('schengenCalculator.cta'),
       disabled: false
+    },
+    {
+        icon: <Building2 className="h-8 w-8 text-primary" />,
+        title: t('districtComparator.title'),
+        description: t('districtComparator.description'),
+        href: "/tools/district-comparator",
+        cta: t('districtComparator.cta'),
+        disabled: false
     },
     {
       icon: <Calculator className="h-8 w-8 text-primary" />,

@@ -1,0 +1,84 @@
+{
+    "districts": [
+        {
+            "id": "praha-1",
+            "name": "Praha 1 (Staré Město, Malá Strana)",
+            "rent": 5,
+            "transport": 5,
+            "amenities": 5,
+            "atmosphere": "Rušná & Turistická",
+            "atmosphere_icon": "Users",
+            "summary": "Historické srdce města. Vynikající dostupnost, ale vysoké ceny a davy lidí. Ideální pro ty, kteří chtějí být v centru dění."
+        },
+        {
+            "id": "praha-2",
+            "name": "Praha 2 (Vinohrady, Nové Město)",
+            "rent": 4,
+            "transport": 5,
+            "amenities": 5,
+            "atmosphere": "Živá & Prestižní",
+            "atmosphere_icon": "GlassWater",
+            "summary": "Populární mezi expaty. Plná kaváren, restaurací a parků. Skvělá rovnováha mezi centrem a klidnějším bydlením."
+        },
+        {
+            "id": "praha-3",
+            "name": "Praha 3 (Žižkov)",
+            "rent": 3,
+            "transport": 4,
+            "amenities": 4,
+            "atmosphere": "Alternativní & Bohemská",
+            "atmosphere_icon": "Paintbrush",
+            "summary": "Známá pro svůj bohémský život, televizní věž a nespočet hospod. Skvělá hodnota za peníze, rychle se rozvíjející."
+        },
+        {
+            "id": "praha-5",
+            "name": "Praha 5 (Smíchov, Anděl)",
+            "rent": 3,
+            "transport": 4,
+            "amenities": 4,
+            "atmosphere": "Moderní & Různorodá",
+            "atmosphere_icon": "Building2",
+            "summary": "Obchodní a dopravní uzel s velkým nákupním centrem. Nabízí moderní bydlení i starší zástavbu, blízko zeleně."
+        },
+        {
+            "id": "praha-6",
+            "name": "Praha 6 (Dejvice, Bubeneč)",
+            "rent": 4,
+            "transport": 4,
+            "amenities": 4,
+            "atmosphere": "Klidná & Rodinná",
+            "atmosphere_icon": "Baby",
+            "summary": "Prestižní rezidenční čtvrť s mnoha ambasádami, parky a dobrou dostupností na letiště. Ideální pro rodiny."
+        },
+        {
+            "id": "praha-7",
+            "name": "Praha 7 (Holešovice, Letná)",
+            "rent": 3,
+            "transport": 4,
+            "amenities": 4,
+            "atmosphere": "Kreativní & Moderní",
+            "atmosphere_icon": "Sparkles",
+            "summary": "Dříve průmyslová, dnes pulzující čtvrť plná galerií, kreativních prostor a parků Letná a Stromovka. Velmi oblíbená."
+        },
+        {
+            "id": "praha-8",
+            "name": "Praha 8 (Karlín, Libeň)",
+            "rent": 3,
+            "transport": 4,
+            "amenities": 4,
+            "atmosphere": "Moderní & Rozvíjející se",
+            "atmosphere_icon": "TrendingUp",
+            "summary": "Karlín se po povodních proměnil v moderní kancelářskou a rezidenční čtvrť s vyhlášenými restauracemi. Libeň je klidnější."
+        },
+        {
+            "id": "praha-10",
+            "name": "Praha 10 (Vršovice)",
+            "rent": 3,
+            "transport": 3,
+            "amenities": 4,
+            "atmosphere": "Hipsterská & Komunitní",
+            "atmosphere_icon": "Coffee",
+            "summary": "Podobně jako Vinohrady, ale s uvolněnější a 'hipsterskou' atmosférou. Plná malých kaváren, barů a lokálních obchodů."
+        }
+    ]
+}

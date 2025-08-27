@@ -73,6 +73,11 @@
       "title": "Schengenská kalkulačka",
       "description": "Spočítejte si své dny v Schengenském prostoru podle pravidla 90/180.",
       "cta": "Otevřít kalkulačku"
+    },
+    "districtComparator": {
+      "title": "Srovnávač čtvrtí",
+      "description": "Porovnejte pražské čtvrti podle nájmu, vybavenosti a atmosféry.",
+      "cta": "Porovnat čtvrti"
     }
   },
   "SchengenCalculator": {

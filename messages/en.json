@@ -73,6 +73,11 @@
       "title": "Schengen Calculator",
       "description": "Calculate your days in the Schengen area according to the 90/180 day rule.",
       "cta": "Open Calculator"
+    },
+    "districtComparator": {
+      "title": "District Comparator",
+      "description": "Compare Prague districts based on rent, amenities, and atmosphere.",
+      "cta": "Compare Districts"
     }
   },
   "SchengenCalculator": {
