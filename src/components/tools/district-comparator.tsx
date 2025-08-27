@@ -38,7 +38,7 @@ const rentLabels: { [key: number]: string } = {
   1: 'Velmi nízké',
   2: 'Nízké',
   3: 'Průměrné',
-  4. 'Vysoké',
+  4: 'Vysoké',
   5: 'Velmi vysoké',
 };
 
