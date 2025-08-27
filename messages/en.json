@@ -78,6 +78,11 @@
       "title": "District Comparator",
       "description": "Compare Prague districts based on rent, amenities, and atmosphere.",
       "cta": "Compare Districts"
+    },
+    "publicHolidays": {
+      "title": "Public Holidays Calendar",
+      "description": "An overview of Czech public holidays, traditions, and store opening hours.",
+      "cta": "View Calendar"
     }
   },
   "SchengenCalculator": {

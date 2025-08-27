@@ -1,0 +1,124 @@
+{
+    "holidays": [
+        {
+            "date": "2025-01-01",
+            "name_cs": "Nový rok; Den obnovy samostatného českého státu",
+            "name_en": "New Year's Day; Restoration Day of the Independent Czech State",
+            "name_uk": "Новий рік; День відновлення незалежної чеської держави",
+            "description_cs": "Oslavy příchodu nového roku. Současně se připomíná vznik samostatné České republiky v roce 1993 po rozdělení Československa. Většina lidí má volno a tráví den odpočinkem po silvestrovských oslavách.",
+            "description_en": "Celebration of the arrival of the new year. It also commemorates the establishment of the independent Czech Republic in 1993 after the split of Czechoslovakia. Most people have the day off and spend it resting after New Year's Eve celebrations.",
+            "description_uk": "Святкування приходу нового року. Також відзначається створення незалежної Чеської Республіки в 1993 році після розпаду Чехословаччини. Більшість людей мають вихідний і проводять день, відпочиваючи після новорічних святкувань.",
+            "stores_open": false
+        },
+        {
+            "date": "2025-03-31",
+            "name_cs": "Velikonoční pondělí",
+            "name_en": "Easter Monday",
+            "name_uk": "Великодній понеділок",
+            "description_cs": "Tradiční svátek spojený s lidovými zvyky, jako je pomlázka – chlapci šlehají dívky vrbovými proutky, aby zůstaly zdravé a svěží. Dívky jim za to dávají malovaná vajíčka. Velký pátek předtím je také státním svátkem a obchody jsou zavřené.",
+            "description_en": "A traditional holiday associated with folk customs like the 'pomlázka' – boys whip girls with willow switches to keep them healthy and fresh. In return, girls give them painted eggs. Good Friday before is also a public holiday and stores are closed.",
+            "description_uk": "Традиційне свято, пов'язане з народними звичаями, такими як 'помлазка' – хлопці б'ють дівчат вербовими прутиками, щоб вони були здоровими та свіжими. Дівчата натомість дарують їм розмальовані яйця. Велика п'ятниця перед цим також є державним святом, і магазини зачинені.",
+            "stores_open": false
+        },
+        {
+            "date": "2025-05-01",
+            "name_cs": "Svátek práce",
+            "name_en": "Labour Day",
+            "name_uk": "День праці",
+            "description_cs": "Mezinárodní svátek práce. V Česku je také vnímán jako svátek zamilovaných, kdy se páry líbají pod rozkvetlou třešní, aby jejich láska vydržela.",
+            "description_en": "International Labour Day. In Czechia, it is also perceived as a day for lovers, when couples kiss under a blossoming cherry tree to ensure their love lasts.",
+            "description_uk": "Міжнародний день праці. У Чехії він також сприймається як свято закоханих, коли пари цілуються під квітучою черешнею, щоб їхнє кохання тривало.",
+            "stores_open": true
+        },
+        {
+            "date": "2025-05-08",
+            "name_cs": "Den vítězství",
+            "name_en": "Victory in Europe Day",
+            "name_uk": "День перемоги",
+            "description_cs": "Připomíná konec druhé světové války v Evropě v roce 1945. Konají se pietní akty a vojenské přehlídky.",
+            "description_en": "Commemorates the end of World War II in Europe in 1945. Commemorative events and military parades are held.",
+            "description_uk": "Відзначає закінчення Другої світової війни в Європі у 1945 році. Проводяться пам'ятні заходи та військові паради.",
+            "stores_open": false
+        },
+        {
+            "date": "2025-07-05",
+            "name_cs": "Den slovanských věrozvěstů Cyrila a Metoděje",
+            "name_en": "Saints Cyril and Methodius Day",
+            "name_uk": "День святих Кирила та Мефодія",
+            "description_cs": "Svátek připomíná příchod byzantských misionářů Cyrila a Metoděje na Velkou Moravu v roce 863, kteří přinesli křesťanství a písmo (hlaholici).",
+            "description_en": "This holiday commemorates the arrival of the Byzantine missionaries Cyril and Methodius to Great Moravia in 863, who brought Christianity and the Glagolitic script.",
+            "description_uk": "Це свято відзначає прибуття візантійських місіонерів Кирила та Мефодія до Великої Моравії у 863 році, які принесли християнство та писемність (глаголицю).",
+            "stores_open": true
+        },
+        {
+            "date": "2025-07-06",
+            "name_cs": "Den upálení mistra Jana Husa",
+            "name_en": "Jan Hus Day",
+            "name_uk": "День спалення Яна Гуса",
+            "description_cs": "Připomíná upálení náboženského reformátora Jana Husa v Kostnici v roce 1415. Hus kritizoval církev a jeho smrt vedla k husitským válkám.",
+            "description_en": "Commemorates the burning at the stake of the religious reformer Jan Hus in Konstanz in 1415. Hus criticized the church, and his death led to the Hussite Wars.",
+            "description_uk": "Відзначає спалення на вогнищі релігійного реформатора Яна Гуса в Констанці у 1415 році. Гус критикував церкву, і його смерть призвела до гуситських воєн.",
+            "stores_open": true
+        },
+        {
+            "date": "2025-09-28",
+            "name_cs": "Den české státnosti",
+            "name_en": "Czech Statehood Day",
+            "name_uk": "День чеської державності",
+            "description_cs": "Svátek svatého Václava, patrona českých zemí, který byl zavražděn v tento den roku 935. Je symbolem české státnosti a národní identity.",
+            "description_en": "The feast day of St. Wenceslas, the patron saint of the Czech lands, who was murdered on this day in 935. He is a symbol of Czech statehood and national identity.",
+            "description_uk": "День святого Вацлава, покровителя чеських земель, який був убитий цього дня у 935 році. Він є символом чеської державності та національної ідентичності.",
+            "stores_open": false
+        },
+        {
+            "date": "2025-10-28",
+            "name_cs": "Den vzniku samostatného československého státu",
+            "name_en": "Independent Czechoslovak State Day",
+            "name_uk": "День створення незалежної чехословацької держави",
+            "description_cs": "Nejdůležitější státní svátek, který slaví vznik Československa v roce 1918. Konají se oslavy po celé zemi, prezident uděluje státní vyznamenání.",
+            "description_en": "The most important public holiday, celebrating the establishment of Czechoslovakia in 1918. Celebrations are held throughout the country, and the president awards state honors.",
+            "description_uk": "Найважливіше державне свято, що відзначає створення Чехословаччини у 1918 році. По всій країні проводяться урочистості, а президент вручає державні нагороди.",
+            "stores_open": false
+        },
+        {
+            "date": "2025-11-17",
+            "name_cs": "Den boje za svobodu a demokracii a Mezinárodní den studentstva",
+            "name_en": "Struggle for Freedom and Democracy Day and International Students' Day",
+            "name_uk": "День боротьби за свободу та демократію та Міжнародний день студентства",
+            "description_cs": "Připomíná studentské demonstrace proti nacistické okupaci v roce 1939 a začátek Sametové revoluce v roce 1989, která svrhla komunistický režim.",
+            "description_en": "Commemorates student demonstrations against the Nazi occupation in 1939 and the beginning of the Velvet Revolution in 1989, which overthrew the communist regime.",
+            "description_uk": "Відзначає студентські демонстрації проти нацистської окупації в 1939 році та початок Оксамитової революції в 1989 році, яка повалила комуністичний режим.",
+            "stores_open": true
+        },
+        {
+            "date": "2025-12-24",
+            "name_cs": "Štědrý den",
+            "name_en": "Christmas Eve",
+            "name_uk": "Святвечір",
+            "description_cs": "Vrchol vánočních svátků v Česku. Rodiny se scházejí u večeře (kapr a bramborový salát), zdobí stromeček a rozbalují dárky. Obchody se zavírají nejpozději v poledne.",
+            "description_en": "The culmination of Christmas holidays in Czechia. Families gather for dinner (carp and potato salad), decorate the Christmas tree, and unwrap presents. Shops close at noon at the latest.",
+            "description_uk": "Кульмінація різдвяних свят у Чехії. Сім'ї збираються на вечерю (короп та картопляний салат), прикрашають ялинку та розгортають подарунки. Магазини зачиняються не пізніше полудня.",
+            "stores_open": false
+        },
+        {
+            "date": "2025-12-25",
+            "name_cs": "1. svátek vánoční",
+            "name_en": "Christmas Day",
+            "name_uk": "Різдво (перший день)",
+            "description_cs": "Den klidu, návštěv příbuzných a pojídání vánočního cukroví.",
+            "description_en": "A day of peace, visiting relatives, and eating Christmas cookies.",
+            "description_uk": "День спокою, відвідування родичів та поїдання різдвяного печива.",
+            "stores_open": false
+        },
+        {
+            "date": "2025-12-26",
+            "name_cs": "2. svátek vánoční (Svatého Štěpána)",
+            "name_en": "St. Stephen's Day (Second Day of Christmas)",
+            "name_uk": "День святого Степана (другий день Різдва)",
+            "description_cs": "Pokračování vánočních oslav, často spojené s dalšími rodinnými setkáními nebo procházkami.",
+            "description_en": "Continuation of Christmas celebrations, often associated with more family gatherings or walks.",
+            "description_uk": "Продовження різдвяних свят, часто пов'язане з ďalšími родинними зустрічами або прогулянками.",
+            "stores_open": false
+        }
+    ]
+}

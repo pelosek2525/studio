@@ -78,6 +78,11 @@
       "title": "Srovnávač čtvrtí",
       "description": "Porovnejte pražské čtvrti podle nájmu, vybavenosti a atmosféry.",
       "cta": "Porovnat čtvrti"
+    },
+    "publicHolidays": {
+      "title": "Kalendář svátků",
+      "description": "Přehled českých státních svátků, tradic a otevírací doby obchodů.",
+      "cta": "Zobrazit kalendář"
     }
   },
   "SchengenCalculator": {
