@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { format, getMonth } from 'date-fns';
 import { cs, enUS, uk, ru } from 'date-fns/locale';
+import { useEffect, useRef } from 'react';
 
 interface Holiday {
     date: string;
@@ -32,6 +33,20 @@ const localeMap: { [key: string]: Locale } = {
 
 export function PublicHolidaysCalendar({ holidays, locale }: PublicHolidaysCalendarProps) {
     const currentLocale = localeMap[locale] || enUS;
+    const monthRefs = useRef<Map<number, HTMLDivElement | null>>(new Map());
+
+    useEffect(() => {
+        const currentMonth = getMonth(new Date());
+        const monthElement = monthRefs.current.get(currentMonth);
+        if (monthElement) {
+            setTimeout(() => {
+                monthElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 100);
+        }
+    }, []);
     
     const getName = (holiday: Holiday) => {
         return holiday[`name_${locale as 'cs' | 'en' | 'uk'}`] || holiday.name_en;
@@ -54,7 +69,11 @@ export function PublicHolidaysCalendar({ holidays, locale }: PublicHolidaysCalen
   return (
     <div className="space-y-12">
         {Object.entries(groupedByMonth).map(([month, monthHolidays]) => (
-            <div key={month}>
+            <div 
+                key={month}
+                ref={(el) => monthRefs.current.set(parseInt(month), el)}
+                className="scroll-mt-20"
+            >
                 <h2 className="font-headline text-3xl font-bold text-primary mb-6 capitalize">
                     {format(new Date(monthHolidays[0].date), 'LLLL', { locale: currentLocale })}
                 </h2>
