@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
 import { Globe, MapPin } from 'lucide-react';
+import { PragueMap } from './prague-map';
 
 interface Office {
   type: string;
@@ -32,17 +33,44 @@ const officeTypeLabels: Record<string, string> = {
 export function OfficeFinder({ offices }: OfficeFinderProps) {
   const [typeFilter, setTypeFilter] = useState('all');
   const [districtFilter, setDistrictFilter] = useState('all');
+  const [hoveredDistrict, setHoveredDistrict] = useState<string | null>(null);
 
-  const districts = ['all', ...Array.from(new Set(offices.map(o => o.district)))];
+  const districts = ['all', ...Array.from(new Set(offices.map(o => o.district).sort((a,b) => a.localeCompare(b, undefined, {numeric: true}))))];
 
   const filteredOffices = offices.filter(office => {
     const typeMatch = typeFilter === 'all' || office.type === typeFilter;
-    const districtMatch = districtFilter === 'all' || office.district === districtFilter;
+    const districtMatch = districtFilter === 'all' || office.district.replace(' ','-').toLowerCase() === districtFilter;
     return typeMatch && districtMatch;
   });
 
+  const handleDistrictClick = (districtId: string) => {
+    setDistrictFilter(districtId);
+  };
+
+  const handleDistrictFilterChange = (value: string) => {
+    setDistrictFilter(value);
+  };
+
+
   return (
     <div className="space-y-8">
+        <Card>
+            <CardHeader>
+                <CardTitle>Interaktivní mapa úřadů</CardTitle>
+                <CardDescription>Klikněte na městskou část na mapě nebo použijte filtry níže pro zobrazení relevantních úřadů.</CardDescription>
+            </CardHeader>
+            <CardContent>
+                <div className="w-full aspect-video md:aspect-[2/1] lg:aspect-[3/1] bg-muted/50 rounded-lg overflow-hidden border">
+                    <PragueMap 
+                        selectedDistrict={districtFilter}
+                        hoveredDistrict={hoveredDistrict}
+                        onDistrictClick={handleDistrictClick}
+                        onDistrictHover={setHoveredDistrict}
+                    />
+                </div>
+            </CardContent>
+        </Card>
+        
         <Card>
             <CardHeader>
                 <CardTitle>Filtrovat úřady</CardTitle>
@@ -60,14 +88,15 @@ export function OfficeFinder({ offices }: OfficeFinderProps) {
                             ))}
                         </SelectContent>
                     </Select>
-                    <Select value={districtFilter} onValueChange={setDistrictFilter}>
+                    <Select value={districtFilter} onValueChange={handleDistrictFilterChange}>
                         <SelectTrigger>
                             <SelectValue placeholder="Vyberte městskou část..." />
                         </SelectTrigger>
                         <SelectContent>
-                            <SelectItem value="all">Všechny městské části</SelectItem>
-                            {districts.filter(d => d !== 'all').sort().map(district => (
-                                <SelectItem key={district} value={district}>{district}</SelectItem>
+                            {districts.map(district => (
+                                <SelectItem key={district} value={district === 'all' ? 'all' : district.replace(' ','-').toLowerCase()}>
+                                    {district === 'all' ? 'Všechny městské části' : district}
+                                </SelectItem>
                             ))}
                         </SelectContent>
                     </Select>
