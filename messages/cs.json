@@ -83,6 +83,11 @@
       "title": "Kalendář svátků",
       "description": "Přehled českých státních svátků, tradic a otevírací doby obchodů.",
       "cta": "Zobrazit kalendář"
+    },
+    "officeFinder": {
+      "title": "Vyhledávač úřadů",
+      "description": "Filtrovatelný seznam klíčových úřadů v Praze (cizinecká policie, finanční úřady atd.).",
+      "cta": "Otevřít vyhledávač"
     }
   },
   "SchengenCalculator": {

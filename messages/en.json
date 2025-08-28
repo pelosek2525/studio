@@ -83,6 +83,11 @@
       "title": "Public Holidays Calendar",
       "description": "An overview of Czech public holidays, traditions, and store opening hours.",
       "cta": "View Calendar"
+    },
+    "officeFinder": {
+      "title": "Office Finder",
+      "description": "A filterable list of key government offices in Prague (foreign police, tax office, etc.).",
+      "cta": "Open Finder"
     }
   },
   "SchengenCalculator": {

@@ -2,7 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Calculator, Sparkles, FileText, ListChecks, BookText, Timer, Building2, CalendarDays } from 'lucide-react';
+import { ArrowRight, Calculator, Sparkles, FileText, ListChecks, BookText, Timer, Building2, CalendarDays, MapPinned } from 'lucide-react';
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 
@@ -17,6 +17,14 @@ export default async function ToolsPage() {
       description: t('articleSummarizer.description'),
       href: "/tools/article-summarizer",
       cta: t('articleSummarizer.cta')
+    },
+    {
+        icon: <MapPinned className="h-8 w-8 text-primary" />,
+        title: t('officeFinder.title'),
+        description: t('officeFinder.description'),
+        href: "/tools/office-finder",
+        cta: t('officeFinder.cta'),
+        disabled: false
     },
     {
       icon: <Timer className="h-8 w-8 text-primary" />,

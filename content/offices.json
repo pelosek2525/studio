@@ -1,0 +1,93 @@
+
+{
+    "offices": [
+        {
+            "type": "foreign_police",
+            "name": "Odbor azylové a migrační politiky (OAMP) MV ČR – Praha I",
+            "district": "Praha 1",
+            "address": "Konviktská 5, 110 00 Praha 1",
+            "website": "https://www.mvcr.cz/oamp/",
+            "serves": "Občané EU a jejich rodinní příslušníci."
+        },
+        {
+            "type": "foreign_police",
+            "name": "Odbor azylové a migrační politiky (OAMP) MV ČR – Praha II",
+            "district": "Praha 6",
+            "address": "Hládkov 682/9, 169 00 Praha 6",
+            "website": "https://www.mvcr.cz/oamp/",
+            "serves": "Studenti, vědci, učitelé a jejich rodinní příslušníci."
+        },
+        {
+            "type": "foreign_police",
+            "name": "Odbor azylové a migrační politiky (OAMP) MV ČR – Praha III",
+            "district": "Praha 9",
+            "address": "Kolbenova 942/38a, 190 00 Praha 9",
+            "website": "https://www.mvcr.cz/oamp/",
+            "serves": "Zaměstnanecké karty, modré karty a další specifické pobytové účely."
+        },
+        {
+            "type": "foreign_police",
+            "name": "Odbor azylové a migrační politiky (OAMP) MV ČR – Praha IV",
+            "district": "Praha 4",
+            "address": "Cigánkova 1861/2, 148 00 Praha 4",
+            "website": "https://www.mvcr.cz/oamp/",
+            "serves": "Žadatelé o dlouhodobý a trvalý pobyt, rodinní příslušníci občanů třetích zemí."
+        },
+        {
+            "type": "trade_office",
+            "name": "Živnostenský úřad pro Prahu 1",
+            "district": "Praha 1",
+            "address": "Vodičkova 18, 115 68 Praha 1",
+            "website": "https://www.praha1.cz/zivnostensky-odbor/",
+            "serves": "Podnikatelé (OSVČ) se sídlem v Praze 1."
+        },
+        {
+            "type": "trade_office",
+            "name": "Živnostenský úřad pro Prahu 2",
+            "district": "Praha 2",
+            "address": "náměstí Míru 20, 120 39 Praha 2",
+            "website": "https://urad.praha2.cz/zivnostensky-odbor.html",
+            "serves": "Podnikatelé (OSVČ) se sídlem v Praze 2."
+        },
+        {
+            "type": "trade_office",
+            "name": "Živnostenský úřad pro Prahu 7",
+            "district": "Praha 7",
+            "address": "U Průhonu 1338/38, 170 00 Praha 7",
+            "website": "https://www.praha7.cz/potrebuji-si-zaridit/zivnostensky-urad/",
+            "serves": "Podnikatelé (OSVČ) se sídlem v Praze 7."
+        },
+        {
+            "type": "tax_office",
+            "name": "Finanční úřad pro Prahu 1",
+            "district": "Praha 1",
+            "address": "Štěpánská 28, 112 33 Praha 1",
+            "website": "https://www.financnisprava.cz/cs/financni-sprava/organy-financni-spravy/uzemni-pracoviste/praha/u-p-pro-prahu-1",
+            "serves": "Daňoví poplatníci s bydlištěm/sídlem v Praze 1."
+        },
+        {
+            "type": "tax_office",
+            "name": "Finanční úřad pro Prahu 7",
+            "district": "Praha 7",
+            "address": "nábř. Kpt. Jaroše 1000/7, 170 00 Praha 7",
+            "website": "https://www.financnisprava.cz/cs/financni-sprava/organy-financni-spravy/uzemni-pracoviste/praha/u-p-pro-prahu-7",
+            "serves": "Daňoví poplatníci s bydlištěm/sídlem v Praze 7."
+        },
+        {
+            "type": "social_security",
+            "name": "Pražská správa sociálního zabezpečení (PSSZ)",
+            "district": "Všechny",
+            "address": "Trojská 1997/13a, 182 00 Praha 8",
+            "website": "https://www.cssz.cz/web/cz/kontakty-pssz",
+            "serves": "Centrální pracoviště pro Prahu. Řeší se zde důchody, nemocenské a OSVČ."
+        },
+        {
+            "type": "post_office",
+            "name": "Hlavní pošta Praha 1",
+            "district": "Praha 1",
+            "address": "Jindřišská 14, 110 00 Praha 1",
+            "website": "https://www.postaonline.cz/",
+            "serves": "Centrální pošta s prodlouženou otevírací dobou, Czech POINT."
+        }
+    ]
+}
