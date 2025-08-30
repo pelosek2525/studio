@@ -6,6 +6,7 @@ import Footer from "@/components/footer";
 import { Toaster } from "@/components/ui/toaster"
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: 'CityZen Guide',
@@ -41,6 +42,7 @@ export default function LocaleLayout({
           <main className="flex-1">{children}</main>
           <Footer />
           <Toaster />
+          <SpeedInsights/>
         </NextIntlClientProvider>
       </body>
     </html>
