@@ -10,6 +10,7 @@ import { NextIntlClientProvider, useMessages } from 'next-intl';
 export const metadata: Metadata = {
   title: 'CityZen Guide',
   description: 'Your practical guide to life in the city.',
+  robots: 'noindex, nofollow',
 };
 
 interface LocaleLayoutProps {
